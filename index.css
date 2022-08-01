@@ -106,3 +106,21 @@ background-color: blueviolet;
     z-index: 999;
     
 }
+#sidebar1{
+    background-color: white;
+    border: none;
+   position: absolute;
+   left: 20px;
+}
+#mobilesidebar{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 190px;
+    background-color: aqua;
+    z-index: 1000000;
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    overflow-y: scroll;
+}

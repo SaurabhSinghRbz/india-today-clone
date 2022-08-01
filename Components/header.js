@@ -14,7 +14,7 @@ function header(){
         <h5><a href="">Reader's Digest</a></h5>
     </div>
     <div id="two">
-    <button id="sidebar1"><img src="../Styles/icons/icons8-menusidebar.svg" alt=""></button>
+    <button id="sidebar1"><img src="./Styles/icons/icons8-menusidebar.svg" alt=""></button>
         <h3><a href="">NEWS</a></h3>
         <h3 >
         <img src="https://akm-img-a-in.tosshub.com/sites/all/themes/itg/images/livedot.gif" alt="">
