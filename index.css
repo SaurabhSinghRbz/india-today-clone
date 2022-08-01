@@ -1,0 +1,126 @@
+@import url("./Styles/navbar.css");
+#sidebar{
+    height: 500px;
+    width: 200px;
+    background-color: aqua;
+    display: none;
+    z-index: 1;
+    position: absolute;
+
+}
+#topstories{
+height: 100em;
+width: 100em;
+background-color: blueviolet;
+
+}
+#container{
+    display: flex;
+    background-color: black;
+}
+#navbar {
+    display: flex;
+    background-color: #a00606;
+   width:100em;
+    gap: 100px;
+}
+#topics {
+    display:grid;
+    grid-template-columns:repeat(10,1fr);
+   
+  
+  
+  padding: none;
+ 
+    white-space: nowrap;
+    align-items: center;
+  margin-left: 100px;
+  
+}
+#topics >div> a {
+    text-decoration: none;
+    color: white;
+   font-size: medium;
+ 
+ text-align: center;
+ 
+}
+#icons{
+    display:flex;
+   gap :20px;
+   
+    justify-content: center;
+    align-items: center;
+    justify-self: end;
+    
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+}
+#icons  > a >img{
+    height: 25px;
+    width: 25px;
+   
+    
+}
+#icons  > a{
+    height: 25px;
+    width: 25px;
+    position:relative;
+    
+    
+}
+#icons>:nth-child(2){
+   
+   margin-right: 30px;
+}
+#icons>:first-child {
+        height: 23px;   
+        width: 19px;
+}
+.items {
+    display: flex;
+    border-right: 1px solid black;
+    
+    height: 100%;
+   
+    justify-content: center;
+    align-items: center;
+   
+}
+#searchbar{
+    display: none;
+    position: absolute;
+    left: 1010px;
+    z-index: 1;
+    transition:left 2s ease-in;
+    
+}
+#searchbar > input{
+    height: 45px;
+    width: 200px;
+}
+#searchicon{
+   
+    position: relative;
+    z-index: 999;
+    
+}
+#sidebar1{
+    background-color: white;
+    border: none;
+   position: absolute;
+   left: 20px;
+}
+#mobilesidebar{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 190px;
+    background-color: aqua;
+    z-index: 1000000;
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
