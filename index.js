@@ -1,7 +1,10 @@
 import {header} from "./Components/header.js"
 import {navbar} from "./Components/navbar.js"
+fetchfeatureddata()
 document.getElementById("navbar").innerHTML=navbar()
-document.getElementById("searchbar").style.display="none"
+//document.getElementById("searchbar").style.display="none"
+document.getElementById("searchbar").className='base'
+document.getElementById("searchbar").style.display=''
 document.getElementById("head").innerHTML=header()
 document.getElementById("searchicon").addEventListener("click",function(){
     displaysearchbar()
@@ -12,8 +15,12 @@ document.getElementById("sidebar1").addEventListener("click",function(){
 function displaysearchbar(){
    
     var searchbar = document.getElementById("searchbar");
-  if(searchbar.style.display === '') searchbar.style.display = 'block'
+  if(searchbar.className==="base"){searchbar.className="visible"}
+ else{ searchbar.className = searchbar.className === 'base' ? 'visible' : 'base' }
+ if(searchbar.style.display === '') searchbar.style.display = 'block'
   else searchbar.style.display = searchbar.style.display === 'none' ? 'block' : 'none' 
+  //console.log(searchbar.className)
+
 }
 function displaysidebar(){
     var searchbar = document.getElementById("mobilesidebar");
@@ -21,6 +28,7 @@ function displaysidebar(){
   else searchbar.style.display = searchbar.style.display === 'none' ? 'block' : 'none' 
 
 }
+
 
 let sidebaritems=[
     "HOME",
@@ -56,15 +64,6 @@ let sidebaritems=[
     "DARK MODE"
 ]
 
-function createsibaritems(){
-    sidebaritems.forEach(element => {
-       let div = document.createElement("div")
-       div.innerText= element;
-       div.className="mobilesidebaritems"
-       document.getElementById("mobilesidebar").append(div)
-    });
-}
-createsibaritems()
 
 async function fetchfeatureddata(){
     let rnum= Math.floor((Math.random()*100)+1)
@@ -75,12 +74,12 @@ async function fetchfeatureddata(){
         let topres =await fetch(`http://localhost:3000/articles?_start=${rnum}&_limit=40&country=India`)
         let topdata = await topres.json()
         console.log(featureddata,topdata)
-         displayfeatueddata(featureddata,topdata)
+       displayfeatueddata(featureddata,topdata)
     } catch (error) {
         console.log(error)
     }
 }
-function displayfeatueddata(featuredata,topdata){
+ function displayfeatueddata(featuredata,topdata){
     let featurenews = document.createElement("div")
         featurenews.className="featurednews"
     featuredata.forEach(element => {
@@ -107,11 +106,11 @@ function displayfeatueddata(featuredata,topdata){
     });
 
 }
-fetchfeatureddata()
+
 
 let categories1 = [
     "India",
-"WORLD",
+
 "BUSINESS",
 "TECH",
 "MOVIES",
@@ -142,7 +141,7 @@ async function fetchcategoriedata(element){
     try {
         let res = await fetch(`http://localhost:3000/articles?q=${element}&_limit=5`)
 let data = await res.json()
-console.log(data)
+//console.log(data)
 displaycategoriesdata(element,data)
     } catch (error) {
         console.log(error)

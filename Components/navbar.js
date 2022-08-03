@@ -37,7 +37,7 @@ function navbar(){
             </path>
         </svg></a>
     <a href=""><img src="./Images/icons/icons8-share.svg" alt=""></a>
-    <div id="searchbar" ><input type="text" placeholder="ENTER search keyword"></div>
+    <input id="searchbar" placeholde="search">
     <div id="searchicon">
 
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
