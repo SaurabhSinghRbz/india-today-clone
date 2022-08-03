@@ -38,7 +38,7 @@ data.map(function(elem){
     let img = document.createElement("img")
     img.setAttribute("class","img")
     if(elem.country =="India"){
-        name.textContent = elem.content+"Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, distinctio."
+        name.textContent = elem.description+" "+elem.description
         tittle.innerText = elem.title
         img.setAttribute("src",elem.urlToImage)
         // console.log(tittle,name);

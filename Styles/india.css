@@ -13,22 +13,28 @@
     padding-right: 10px;
     }
     #single{
+        display: grid;
+        grid-template-columns: 20% 80%;
+    }
+    #single >:first-child{
         display: flex;
+        align-items: center;
     }
     .img{
         max-width: 80%;
     }
     .sideimg{
         max-width: 40%;
+
     }
     aside{
         /* float: right; */
         border: 1px solid grey;
     }
    #newspage{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    /* display: flex; */
+    /* display: grid;
+    grid-template-columns: repeat(2,1fr); */
+    display: flex;
    }
    /* #flex-child{
     flex: 1;
