@@ -1,6 +1,11 @@
 import {header} from "./Components/header.js"
 import {navbar} from "./Components/navbar.js"
-fetchfeatureddata()
+import {createsibaritems} from "./Components/sidebar.js"
+import { displayfeatueddata } from "./Components/displaydata.js"
+import{fetchfeatureddata} from "./Components/getdata.js"
+
+createsibaritems()
+fetchfeatureddata(displayfeatueddata)
 document.getElementById("navbar").innerHTML=navbar()
 //document.getElementById("searchbar").style.display="none"
 document.getElementById("searchbar").className='base'
@@ -12,6 +17,38 @@ document.getElementById("searchicon").addEventListener("click",function(){
 document.getElementById("sidebar1").addEventListener("click",function(){
     displaysidebar()
 })
+document.getElementById("opsr").addEventListener("click",opsr)
+document.getElementById("opsl").addEventListener("click",opsl)
+document.getElementById("vssr").addEventListener("click",vssr)
+document.getElementById("vssl").addEventListener("click",vssl)
+document.getElementById("tssr").addEventListener("click",tssr)
+document.getElementById("tssl").addEventListener("click",tssl)
+
+function opsr(){
+    document.getElementById("opinions").scrollLeft += 400;
+}
+function opsl(){
+    document.getElementById("opinions").scrollLeft -= 400;
+}
+function vssr(){
+    document.getElementById("visualstories").scrollLeft += 400;
+}
+function vssl(){
+    document.getElementById("visualstories").scrollLeft -= 400;
+}function tssr(){
+    document.getElementById("todaysspecials").scrollLeft += 400;
+}
+function tssl(){
+    document.getElementById("todaysspecials").scrollLeft -= 400;
+}
+
+
+
+
+
+
+
+
 function displaysearchbar(){
    
     var searchbar = document.getElementById("searchbar");
@@ -28,85 +65,6 @@ function displaysidebar(){
   else searchbar.style.display = searchbar.style.display === 'none' ? 'block' : 'none' 
 
 }
-
-
-let sidebaritems=[
-    "HOME",
-    "MY FEEDS",
-    "INDIA",
-    "WORLD",
-    "BUSINESS",
-    "TECH",
-    "MOVIES",
-    "CWG 2022 ",
-    "SCIENCE",
-    "BEST COLLEGES",
-    "HEALTH",
-    "TRENDING",
-    "VIDEOS",
-    "EDUCATION",
-    "AUTO",
-    "CITIES",
-    "CRIME",
-    "LIFESTYLE",
-    "BINGE WATCH",
-    "TELEVISION",
-    "INTERACTIVES",
-    "VISUAL STORIES",
-    "HOROSCOPES",
-    "FACTCHECK",
-    "DIU",
-    "NEWSMO",
-    "SHOPPING",
-    "GAMING",
-    "CODE OF ETHICS",
-    "RATE CARD",
-    "DARK MODE"
-]
-
-
-async function fetchfeatureddata(){
-    let rnum= Math.floor((Math.random()*100)+1)
-    console.log(rnum)
-    try {
-        let featuredres= await fetch(`http://localhost:3000/articles?_start=${rnum}&_limit=3`)
-        let featureddata = await featuredres.json()
-        let topres =await fetch(`http://localhost:3000/articles?_start=${rnum}&_limit=40&country=India`)
-        let topdata = await topres.json()
-        console.log(featureddata,topdata)
-       displayfeatueddata(featureddata,topdata)
-    } catch (error) {
-        console.log(error)
-    }
-}
- function displayfeatueddata(featuredata,topdata){
-    let featurenews = document.createElement("div")
-        featurenews.className="featurednews"
-    featuredata.forEach(element => {
-        
-    let featuredpost1= document.createElement("div")
-    featuredpost1.className="post"
-    let postimg = document.createElement("img");
-    postimg.className="postimg"
-    postimg.src= element.urlToImage
-    let posttitle= document.createElement("h3")
-    posttitle.innerText= element.title;
-    featuredpost1.append(postimg,posttitle);
-    featurenews.append(featuredpost1);
-    document.getElementById("featurednewsdiv").append(featurenews)
-    });
-   
-    topdata.forEach(element => {
-        let topstories = document.createElement("div")
-        topstories.className="topstories"
-        let h4 = document.createElement("h4")
-        h4.innerText=element.title;
-        topstories.append(h4);
-        document.getElementById("topstoriesdiv").append(topstories)
-    });
-
-}
-
 
 let categories1 = [
     "India",
@@ -139,7 +97,8 @@ categories1.forEach(element => {
 });
 async function fetchcategoriedata(element){
     try {
-        let res = await fetch(`http://localhost:3000/articles?q=${element}&_limit=5`)
+        let rnum= Math.floor((Math.random()*100)+1)
+        let res = await fetch(`http://localhost:3000/articles?_start=${rnum}q=${element}&_limit=5`)
 let data = await res.json()
 //console.log(data)
 displaycategoriesdata(element,data)
