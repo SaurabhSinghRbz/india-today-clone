@@ -42,11 +42,103 @@ let appendData = async () => {
             parentDiv.append(iframeDiv, TextDiv)
             containerDiv.append(parentDiv)
         }
+
+        if (index >=8  && index < 12) {
+            let containerDiv = document.getElementById("newsToday-flexbox-3")
+            let parentDiv = document.createElement("div")
+            let iframeDiv = document.createElement("div")
+            let TextDiv = document.createElement("div")
+            let text = document.createElement("p")
+
+            iframeDiv.innerHTML = element.videoUrl
+            text.textContent = element.description
+
+            TextDiv.append(text)
+            parentDiv.append(iframeDiv, TextDiv)
+            containerDiv.append(parentDiv)
+        }
+
+        if (index >=12  && index < 16) {
+            let containerDiv = document.getElementById("newsToday-flexbox-4")
+            let parentDiv = document.createElement("div")
+            let iframeDiv = document.createElement("div")
+            let TextDiv = document.createElement("div")
+            let text = document.createElement("p")
+
+            iframeDiv.innerHTML = element.videoUrl
+            text.textContent = element.description
+
+            TextDiv.append(text)
+            parentDiv.append(iframeDiv, TextDiv)
+            containerDiv.append(parentDiv)
+        }
+
+        if (index==16) {
+            let containerDiv = document.getElementById("bottom-1")
+            let textDiv = document.createElement("div")
+            let text = document.createElement("p")
+            text.textContent = element.title
+
+            let imgDiv = document.createElement("div")
+            let image = document.createElement("img")
+            image.src = element.urlToImage
+
+            textDiv.append(text)
+            imgDiv.append(image)
+            containerDiv.append(textDiv,imgDiv)
+        }
+
+        if (index==17) {
+            let containerDiv = document.getElementById("bottom-2")
+            let textDiv = document.createElement("div")
+            let text = document.createElement("p")
+            text.textContent = element.title
+
+            let imgDiv = document.createElement("div")
+            let image = document.createElement("img")
+            image.src = element.urlToImage
+
+            textDiv.append(text)
+            imgDiv.append(image)
+            containerDiv.append(textDiv,imgDiv)
+        }
+
+        if (index==18) {
+            let containerDiv = document.getElementById("bottom-3")
+            let textDiv = document.createElement("div")
+            let text = document.createElement("p")
+            text.textContent = element.title
+
+            let imgDiv = document.createElement("div")
+            let image = document.createElement("img")
+            image.src = element.urlToImage
+
+            textDiv.append(text)
+            imgDiv.append(image)
+            containerDiv.append(textDiv,imgDiv)
+        }
+
+        if (index==19) {
+            let containerDiv = document.getElementById("bottom-4")
+            let textDiv = document.createElement("div")
+            let text = document.createElement("p")
+            text.textContent = element.title
+
+            let imgDiv = document.createElement("div")
+            let image = document.createElement("img")
+            image.src = element.urlToImage
+
+            textDiv.append(text)
+            imgDiv.append(image)
+            containerDiv.append(textDiv,imgDiv)
+        }
+
+
     });
 
 
 
 }
 
- appendData()
+appendData()
 // getData()
