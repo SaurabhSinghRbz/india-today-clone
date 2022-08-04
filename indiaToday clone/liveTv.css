@@ -10,6 +10,26 @@
 
 }
 
+.showVideos{
+    color: #bb0a0a;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.horizontalLine{
+    background-color: #494949;
+    height: 5px;
+    width: 70%;
+    margin: auto;
+    color: white;
+    margin-right: 5%;
+}
+
+.horizontalLine-flex{
+    display: flex;
+    
+}
+
+
 @media screen and (min-width: 990px) {
     #outer {
         display: flex;
@@ -49,7 +69,10 @@
     #readthisDiv {
         /* height: 500%; */
         border: 1px solid rgb(228, 224, 224);
+        margin-top: 10.6%;
     }
+
+
 }
 
 @media screen and (min-width: 601px) and (max-width: 989px) {
@@ -155,14 +178,31 @@
     margin-left: 8px;
     font-weight: 1000;
     color: #111;
-    font-family: OpenSans-Semibold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 15px;
     /* border: 1px solid black; */
     padding-top: 3px;
 }
 
 
+.description{
+    color: #494949;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: 400;
+    font-stretch: normal;
+    font-size: 15px;
+    line-height: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
+}
+
+.description:hover{
+    color: rgb(184, 183, 209);
+}
 
 /* .newsToday-flexbox div{
     width: 22%;
@@ -186,7 +226,6 @@
     overflow: hidden;
     /* border: 1px solid black; */
     height: 130px;
-
 }
 
 .newsToday-flexbox>:nth-child(1) iframe,
@@ -223,6 +262,7 @@
 
 #liveTvH1-Tag {
     margin-top: -7px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 
@@ -239,9 +279,22 @@
     /* padding: 5%; */
 }
 
+#readthisDiv-Top{
+    display: flex;
+}
+
+.horizontalLine-2{
+    background-color: #494949;
+    height: 5px;
+    width: 65%;
+    margin: auto;
+    color: white;
+    margin-left: 5%;
+}
 
 #readthisDiv-Top h3 {
     color: #bb0a0a;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #readthisDiv> :nth-child(1) {
@@ -264,23 +317,24 @@
 
 .readthisDiv-Bottom>:nth-child(1) {
     width: 70%;
-    /* border: 1px solid rgb(11, 10, 10); */
+    /* border: 1px solid rgb(255, 10, 10); */
     padding-left: 3% 3% 3%;
     overflow: hidden;
     /* height: 100%; */
 }
 
 .readthisDiv-Bottom>:nth-child(1)>p {
-    font-size: 16px;
-    color: #111;
-    font-weight: 1000;
+    /* font-size: 16px;
+    /* color: #111; */
+    font-weight: 1000; 
     /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
 
 }
 
 .readthisDiv-Bottom>:nth-child(2) {
     width: 40%;
-    /* border: 1px solid rgb(96, 119, 7); */
+    /* border: 1px solid rgb(9, 7, 119); */
+    padding-bottom: 4%;
 }
 
 .readthisDiv-Bottom>:nth-child(2) img {
@@ -300,25 +354,32 @@
     /* border: 1px solid black; */
     padding-left: 5%;
     overflow: hidden;
+    padding-top: 3%;
 }
 
 .readthisDiv-BottomDivisions>:nth-child(1) p {
-    font-size: 16px;
-    color: #111;
+    /* font-size: 16px;
+    color: #111; */
     font-weight: 1000;
-    font-family: OpenSans-Bold;
+    /* font-family: OpenSans-Bold; */
     margin-top: 6px;
 }
 
 .readthisDiv-BottomDivisions>:nth-child(2) {
-    /* border: 1px solid black; */
+    /* border: 4px solid rgb(33, 169, 6); */
     width: 33%;
     padding-top: 8px;
+    /* overflow: hidden; */
 }
 
 .readthisDiv-BottomDivisions>:nth-child(2) img {
-    /* height: 60px; */
+    height: 60px;
     width: 83.8%;
     margin-left: 9%;
     margin-top: 8%;
+    object-fit: contain;
+}
+
+.News-LiveTV{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }

@@ -20,8 +20,15 @@ let appendData = async () => {
             let TextDiv = document.createElement("div")
             let text = document.createElement("p")
 
+            TextDiv.addEventListener('click', function () {
+                localStorage.setItem("articleId", element.source.id)
+                location.href = "../Pages/detailedArticle.html"
+            })
+
+
             iframeDiv.innerHTML = element.videoUrl
             text.textContent = element.description
+            text.setAttribute("class","description")
 
             TextDiv.append(text)
             parentDiv.append(iframeDiv, TextDiv)
@@ -35,8 +42,14 @@ let appendData = async () => {
             let TextDiv = document.createElement("div")
             let text = document.createElement("p")
 
+            TextDiv.addEventListener('click', function () {
+                localStorage.setItem("articleId", element.source.id)
+                location.href = "../Pages/detailedArticle.html"
+            })
+
             iframeDiv.innerHTML = element.videoUrl
             text.textContent = element.description
+            text.setAttribute("class","description")
 
             TextDiv.append(text)
             parentDiv.append(iframeDiv, TextDiv)
@@ -49,6 +62,12 @@ let appendData = async () => {
             let iframeDiv = document.createElement("div")
             let TextDiv = document.createElement("div")
             let text = document.createElement("p")
+            text.setAttribute("class","description")
+
+            TextDiv.addEventListener('click', function () {
+                localStorage.setItem("articleId", element.source.id)
+                location.href = "../Pages/detailedArticle.html"
+            })
 
             iframeDiv.innerHTML = element.videoUrl
             text.textContent = element.description
@@ -64,6 +83,11 @@ let appendData = async () => {
             let iframeDiv = document.createElement("div")
             let TextDiv = document.createElement("div")
             let text = document.createElement("p")
+            text.setAttribute("class","description")
+            TextDiv.addEventListener('click', function () {
+                localStorage.setItem("articleId", element.source.id)
+                location.href = "../Pages/detailedArticle.html"
+            })
 
             iframeDiv.innerHTML = element.videoUrl
             text.textContent = element.description
@@ -78,6 +102,11 @@ let appendData = async () => {
             let textDiv = document.createElement("div")
             let text = document.createElement("p")
             text.textContent = element.title
+            text.setAttribute("class","description")
+            textDiv.addEventListener('click', function () {
+                localStorage.setItem("articleId", element.source.id)
+                location.href = "../Pages/detailedArticle.html"
+            })
 
             let imgDiv = document.createElement("div")
             let image = document.createElement("img")
@@ -93,6 +122,12 @@ let appendData = async () => {
             let textDiv = document.createElement("div")
             let text = document.createElement("p")
             text.textContent = element.title
+            text.setAttribute("class","description")
+
+            textDiv.addEventListener('click', function () {
+                localStorage.setItem("articleId", element.source.id)
+                location.href = "../Pages/detailedArticle.html"
+            })
 
             let imgDiv = document.createElement("div")
             let image = document.createElement("img")
@@ -108,6 +143,12 @@ let appendData = async () => {
             let textDiv = document.createElement("div")
             let text = document.createElement("p")
             text.textContent = element.title
+            text.setAttribute("class","description")
+
+            textDiv.addEventListener('click', function () {
+                localStorage.setItem("articleId", element.source.id)
+                location.href = "../Pages/detailedArticle.html"
+            })
 
             let imgDiv = document.createElement("div")
             let image = document.createElement("img")
@@ -123,6 +164,12 @@ let appendData = async () => {
             let textDiv = document.createElement("div")
             let text = document.createElement("p")
             text.textContent = element.title
+            text.setAttribute("class","description")
+
+            textDiv.addEventListener('click', function () {
+                localStorage.setItem("articleId", element.source.id)
+                location.href = "../Pages/detailedArticle.html"
+            })
 
             let imgDiv = document.createElement("div")
             let image = document.createElement("img")
@@ -133,6 +180,90 @@ let appendData = async () => {
             containerDiv.append(textDiv,imgDiv)
         }
 
+
+        if (index==20) {
+            let containerDiv = document.getElementById("bottom-5")
+            let textDiv = document.createElement("div")
+            let text = document.createElement("p")
+            text.textContent = element.title
+            text.setAttribute("class","description")
+
+            textDiv.addEventListener('click', function () {
+                localStorage.setItem("articleId", element.source.id)
+                location.href = "../Pages/detailedArticle.html"
+            })
+
+            let imgDiv = document.createElement("div")
+            let image = document.createElement("img")
+            image.src = element.urlToImage
+
+            textDiv.append(text)
+            imgDiv.append(image)
+            containerDiv.append(textDiv,imgDiv)
+        }
+
+        if (index==21) {
+            let containerDiv = document.getElementById("bottom-6")
+            let textDiv = document.createElement("div")
+            let text = document.createElement("p")
+            text.textContent = element.title
+            text.setAttribute("class","description")
+
+            textDiv.addEventListener('click', function () {
+                localStorage.setItem("articleId", element.source.id)
+                location.href = "../Pages/detailedArticle.html"
+            })
+
+            let imgDiv = document.createElement("div")
+            let image = document.createElement("img")
+            image.src = element.urlToImage
+
+            textDiv.append(text)
+            imgDiv.append(image)
+            containerDiv.append(textDiv,imgDiv)
+        }
+
+        if (index==22) {
+            let containerDiv = document.getElementById("bottom-7")
+            let textDiv = document.createElement("div")
+            let text = document.createElement("p")
+            text.textContent = element.title
+            text.setAttribute("class","description")
+
+            textDiv.addEventListener('click', function () {
+                localStorage.setItem("articleId", element.source.id)
+                location.href = "../Pages/detailedArticle.html"
+            })
+
+            let imgDiv = document.createElement("div")
+            let image = document.createElement("img")
+            image.src = element.urlToImage
+
+            textDiv.append(text)
+            imgDiv.append(image)
+            containerDiv.append(textDiv,imgDiv)
+        }
+
+        if (index==23) {
+            let containerDiv = document.getElementById("bottom-8")
+            let textDiv = document.createElement("div")
+            let text = document.createElement("p")
+            text.textContent = element.title
+            text.setAttribute("class","description")
+
+            textDiv.addEventListener('click', function () {
+                localStorage.setItem("articleId", element.source.id)
+                location.href = "../Pages/detailedArticle.html"
+            })
+
+            let imgDiv = document.createElement("div")
+            let image = document.createElement("img")
+            image.src = element.urlToImage
+
+            textDiv.append(text)
+            imgDiv.append(image)
+            containerDiv.append(textDiv,imgDiv)
+        }
 
     });
 
