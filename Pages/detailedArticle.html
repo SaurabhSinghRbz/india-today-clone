@@ -4,273 +4,114 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="icon" href="../Images/titleIcon.ico">
+    <title id="pageTitle">Document</title>
+    <link rel="stylesheet" href="../Styles/detailedArticle.css">
+    <link rel="icon" href="https://www.indiatoday.in/sites/all/themes/itg/favicon.ico">
 </head>
-<style>
-    * {
-        margin: 0px;
-        padding: 0px;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-
-    #head {
-        height: 40px;
-        width: 100%;
-        background-color: aqua;
-    }
-
-    #navbar {
-        height: 150px;
-        width: 100%;
-        background-color: blueviolet;
-    }
-
-    #articleContainer {
-        height: 80vh;
-        width: 100%;
-    }
-
-    #footerBox {
-        height: auto;
-        width: 100%;
-        background-color: #000;
-        color: white;
-    }
-
-    #footerBlock1 {
-        height: auto;
-        display: flex;
-        padding: 2px 8%;
-        align-items: center;
-        justify-content: space-between;
-        border-bottom: 1px solid grey;
-
-    }
-
-    #footerBlock1>:first-child {
-        width: 18%;
-        display: flex;
-        align-items: center;
-        font-size: 1.5rem;
-        font-weight: 500;
-
-    }
-
-    #footerBlock1>:last-child {
-        width: 17%;
-        display: grid;
-        grid-template-columns: 80% 20%;
-
-    }
-
-    #footerBlock1>:last-child>:first-child {
-        display: flex;
-        align-items: center;
-    }
-
-    #footerBlock1>:last-child>div>div {
-        border-right: 1px solid grey;
-    }
-
-    #footerBlock1 img {
-        height: 95%;
-        width: 100%;
-    }
-
-    #footerBlock2 {
-        height: auto;
-        padding: 30px 5%;
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 35px;
-        /* transition: top 2s ease-in;
-        transition-duration: 20s; */
-    }
-
-    #footerBlock2 h4 {
-        font-size: 0.85rem;
-        margin-top: 15px;
-    }
-
-    .footerMenu {
-        font-size: 12px;
-        line-height: 30px;
-        color: grey;
-        /* display: block; */
-    }
-
-    .footerMenu:hover {
-        color: rgb(184, 144, 12);
-        cursor: pointer;
-    }
-
-    #footerBlock3 {
-        height: auto;
-        text-align: center;
-        color: white;
-    }
-
-    #footerBlock3>div {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 10px;
-        border-bottom: 1px solid grey;
-    }
-
-    #footerBlock3>div>a {
-        margin: 2px 5px;
-    }
-
-    #footerBlock3>:last-child {
-        font-size: 11px;
-        color: grey;
-        padding: 8px 5px;
-    }
-
-    @media (max-width: 290px) {
-        #footerBlock1>:first-child {
-            font-size: 20px;
-        }
-
-        #footerBlock1>:last-child {
-            grid-template-columns: 100%;
-        }
-
-        .social-connect {
-            display: none;
-            border: none;
-        }
-    }
-
-    @media (min-width: 291px) and (max-width: 550px) {
-        .social-connect {
-            display: none;
-            border: none;
-        }
-
-        #footerBlock1>:last-child {
-            grid-template-columns: 100%;
-        }
-    }
-
-
-    @media (min-width: 551px) and (max-width: 920px) {
-        #footerBlock1>:last-child {
-            width: 55%;
-        }
-    }
-</style>
 
 <body>
     <div id="mobilesidebar"></div>
     <div id="head"></div>
     <div id="navbar"></div>
-    <div id="articleContainer"></div>
-    <div id="footerContainer">
-        <div id="footerBox">
-            <div id="footerBlock1">
-                <div>INDIATODAY.IN</div>
-                <div>
+    <div id="articleContainer">
+        <div id="showArticle">
+            <p id="showCategoery"></p>
+            <h1 id="newsTitle"></h1>
+            <em></em>
+            <div id="authorDetails">
+                <div id="authorPicBox">
+                    <div><img src="..//Images/newsDetails/userProfile.jpg"></div>
                     <div>
-                        <div><a target="_blank" href="https://www.facebook.com/IndiaToday/"><img class="social-connect"
-                                    src="../Images/footer/fb.png"></a></div>
-                        <div><a target="_blank" href="https://twitter.com/indiatoday"><img class="social-connect"
-                                    src="../Images/footer/twitter.png"></a></div>
-                        <div><a href="#"><img class="social-connect" src="../Images/footer/rss.png"></a></div>
-                        <div><a href="#"><img class="social-connect" src="../Images/footer/search.png"></a></div>
+                        <p id="auName"></p>
+                        <p id="postedDate"></p>
                     </div>
-                    <div id="hider"><a href="#"><img id="hiderImg" src="../Images/footer/hide.png"></a></div>
+                </div>
+                <div id="socialLinks">
+                    <a target="_blank" href="https://www.youtube.com/channel/UCYPvAwZP8pZhSMW8qs7cVCw"><img
+                            class="social-icons" src="../Images/newsDetails/youtube.webp"></a>
+                    <a target="_blank" href="https://www.facebook.com/IndiaToday"><img class="social-icons"
+                            src="../Images/newsDetails/fb.webp"></a>
+                    <a target="_blank" href="https://twitter.com/indiatoday"><img class="social-icons"
+                            src="../Images/newsDetails/twitter.webp"></a>
+                    <a target="_blank" href="#"><img class="social-icons" src="../Images/newsDetails/whatsapp.webp"></a>
+                    <a target="_blank" href="#"><img class="social-icons" src="../Images/newsDetails/bookmark.webp"></a>
+                    <a target="_blank" href="#"><img class="social-icons" src="../Images/newsDetails/comment.webp"></a>
                 </div>
             </div>
-            <div id="footerBlock2">
-                <div>
-                    <h4>PUBLICATIONS:</h4>
-                    <p class="footerMenu">Business Today</p>
-                    <p class="footerMenu">Cosmopolitan</p>
-                    <p class="footerMenu">India Today - Hindi</p>
-                    <p class="footerMenu">India Today</p>
-                    <p class="footerMenu">Mail Today</p>
-                    <p class="footerMenu">Money Today</p>
-                    <p class="footerMenu">Reader's Digest</p>
-                    <p class="footerMenu">Time</p>
-                </div>
-                <div>
-                    <h4>TELEVISION:</h4>
-                    <p class="footerMenu">Aaj Tak</p>
-                    <p class="footerMenu">Delhi Aaj Tak</p>
-                    <p class="footerMenu">Good News Today</p>
-                    <p class="footerMenu">India Today TV</p>
-                    <h4>RADIO:</h4>
-                    <p class="footerMenu">Ishq FM</p>
-                    <h4>GAMING:</h4>
-                    <p class="footerMenu">India Today Gaming</p>
-                    <p class="footerMenu">World Esports Cup</p>
-                    <p class="footerMenu">Esports Premier League</p>
-                </div>
-                <div>
-                    <h4>EDUCATION:</h4>
-                    <p class="footerMenu">India Today Education</p>
-                    <p class="footerMenu">Vasant Valley</p>
-                    <p class="footerMenu">Best Colleges India 2018</p>
-                    <p class="footerMenu">Best Universities India 2018</p>
-                    <p class="footerMenu">Aajtak Campus National Aptitude test</p>
-                    <h4>ONLINE SHOPPING:</h4>
-                </div>
-                <div>
-                    <h4>EVENTS:</h4>
-                    <p class="footerMenu">Agenda Aajtak</p>
-                    <p class="footerMenu">India Today Conclave</p>
-                    <p class="footerMenu">Robb Report India 2018</p>
-                    <p class="footerMenu">Sahitya Aaj Tak</p>
-                    <p class="footerMenu">The Red Lab</p>
-                </div>
-                <div>
-                    <h4>PRINTING:</h4>
-                    <p class="footerMenu">Thomson Press</p>
-                    <h4>WELFARE:</h4>
-                    <p class="footerMenu">Care Today</p>
-                    <h4>MUSIC:</h4>
-                    <p class="footerMenu">Music Today</p>
-                </div>
-                <div>
-                    <h4>SYNDICATIONS:</h4>
-                    <p class="footerMenu">India content</p>
-                    <p class="footerMenu">Headlines Today</p>
-                    <h4>DISTRIBUTION:</h4>
-                    <p class="footerMenu">Rate Card</p>
-                    <h4>USEFUL LINKS :</h4>
-                    <p class="footerMenu">Partners</p>
-                    <p class="footerMenu">Press Release</p>
-                    <p class="footerMenu">Sitemap</p>
-                    <p class="footerMenu">News</p>
-                    <p class="footerMenu">Newsletter</p>
-                    <p class="footerMenu">Privacy Policy</p>
-                    <p class="footerMenu">Correction Policy</p>
-                </div>
+            <div id="posterBox"><img src="" id="articlePoster"></div>
+            <div id="audioBox"></div>
+            <div id="newsContentBox">
+                <p id="newsContent1"></p>
+                <br>
+                <br>
+                <p id="newsContent2"></p>
+                <br>
+                <br>
+                <br>
+                <p id="newsContent3"></p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p id="newsContent4"></p>
+                <a href="#"><img style="margin: 15px 0;" src="../Images/newsDetails/liveTvGif.webp" alt=""></a>
+                <p style="text-align: center; margin-bottom: 20px;">--- ENDS ---</p>
             </div>
-            <div id="footerBlock3">
-                <p class="footerMenu">Download App</p>
+            <div id="readMoreButt"><button>Read More ➥</button></div>
+            <div id="subscribeBox">
+                <div>SUBSCRIBE TO OUR NEWSLETTER</div>
                 <div>
-                    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.indiatoday&hl=en">
-                        <img src="../Images/footer/androidApp.png">
-                    </a>
-                    <a target="_blank" href="https://apps.apple.com/in/app/india-today-live/id510733452">
-                        <img src="../Images/footer/IOSApp.png">
-                    </a>
-                    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.indiatoday.tv">
-                        <img src="../Images/footer/watchOnTv.png">
-                    </a>
+                    <input type="email" id="emailBox" placeholder="Enter your email">
+                    <button>GO</button>
                 </div>
-                <p class="footerMenu">Copyright © 2022 Living Media India Limited. For reprint rights: Syndications
-                    Today</p>
+                <div id="checkBox">
+                    <input type="checkbox">
+                    <p>I agree to receive newsletters via email*</p>
+                </div>
+
+            </div>
+            <div
+                style="height: 50px; width: 100%; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; margin-bottom: 20px;">
+            </div>
+
+            <div id="commentBox">
+                <button id="commentCount"></button>
             </div>
         </div>
-
+        <div id="suggestedArticle">
+            <div id="random1">
+                <div class="suggestedHeading">
+                    <h3>READ THIS</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div id="random2">
+                <div class="suggestedHeading">
+                    <h3>RECOMMENDED</h3>
+                    <p></p>
+                </div>
+                <div class="bigPoster">
+                    <div><img src="https://i.ytimg.com/vi/Vt-V6vH24_U/maxresdefault.jpg"></div>
+                    <p>Subway fan earns free subs for life after receiving a promotional tattoo - Yahoo Finance</p>
+                </div>
+            </div>
+            <div id="random3">
+                <div class="suggestedHeading">
+                    <h3>READ RIGHT NOW</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div id="random4">
+                <div class="suggestedHeading">
+                    <h3>TOP TAKES</h3>
+                    <p></p>
+                </div>
+            </div>
+        </div>
     </div>
+    <div id="footerContainer"></div>
     </div>
 </body>
-<script src="../Scripts/detailedArticle.js"></script>
+<script src="../Scripts/detailedArticle.js" type="module"></script>
 
 </html>
