@@ -351,3 +351,120 @@
     transform: scale(1.1);
     transition: all .5s ease 0s;
 }
+
+
+
+
+/* styling for related articles ---> */
+#relatedArticle {
+    height: auto;
+    width: 100%;
+    /* background-color: violet; */
+}
+
+#bigArticlePoster {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin: 20px 0;
+}
+
+#bigArticlePoster>div {
+    height: 320px;
+    overflow: hidden;
+    /* border: 1px solid blue; */
+}
+
+#bigArticlePoster>div:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#bigArticlePoster>div>img {
+    height: 75%;
+    width: 100%;
+
+}
+
+#bigArticlePoster>div>img:hover {
+    transform: scale(1.05);
+    transition: all .5s ease 0s;
+}
+
+#bigArticlePoster>div>p {
+    padding: 12px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16.0px;
+    line-height: 22.0px;
+    font-weight: bold;
+    color: #000000;
+}
+
+#smallArticlePoster {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 40px 0;
+}
+
+#smallArticlePoster>div {
+    height: 200px;
+    /* border: 1px solid blue; */
+    overflow: hidden;
+}
+
+#smallArticlePoster>div:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+#smallArticlePoster>div>img {
+    height: 75%;
+    width: 100%;
+}
+
+#smallArticlePoster>div>img:hover {
+    transform: scale(1.1);
+    transition: all .5s ease 0s;
+}
+
+#smallArticlePoster>div>p {
+    padding: 5px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16.0px;
+    line-height: 22.0px;
+    font-weight: bold;
+    color: #000000;
+}
+
+
+#loadMoreButt {
+    background: transparent;
+    padding: 15px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#loadMoreButt>button {
+    padding: 8px 15px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(209, 1, 1, 0.863);
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+#loadMoreButt>button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all .5s ease 0s;
+}
