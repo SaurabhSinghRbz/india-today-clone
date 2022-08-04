@@ -19,6 +19,7 @@ async function getData(){
 
 
 function display(data,sideData){
+    let country ="India"
 data.map(function(elem){
     //box==> Containing all single news
     let box = document.getElementById("newsBox")   
@@ -34,10 +35,10 @@ data.map(function(elem){
    details.setAttribute("id","details")
 
     let name = document.createElement("p")
-    let tittle = document.createElement("h5")
+    let tittle = document.createElement("h4")
     let img = document.createElement("img")
     img.setAttribute("class","img")
-    if(elem.country =="India"){
+    if(elem.country ==country){
         name.textContent = elem.description+" "+elem.description
         tittle.innerText = elem.title
         img.setAttribute("src",elem.urlToImage)
