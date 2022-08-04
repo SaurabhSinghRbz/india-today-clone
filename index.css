@@ -4,17 +4,41 @@
 img{
     height: 200px;
     width: 300px;
+    cursor: pointer;
 }
 body{
   width: fit-content;
   overflow: hidden;
   overflow-y: scroll;
 }
+h1, h2 ,h3 ,h4 {
+  cursor: pointer;
+}
+h1:hover{
+  color: #263658;
+}
+h2:hover{
+  color: #263658;
+}
+h3:hover{
+  color: #263658;
+}
+h4:hover{
+  color: #263658;
+}
+h5:hover{
+  color: #263658;
+}
+p:hover{
+  color: #263658;
+}
+
 *{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 #sidebar {
-  height: 500px;
+  height:1000vw;
   width: 200px;
  
   display: none;
@@ -25,7 +49,6 @@ body{
     display: grid;
     grid-template-columns: repeat(3,1fr);
    
-   
 }
 #topstoriesdiv{
 
@@ -33,12 +56,25 @@ body{
   width: 300;
   overflow: hidden;
   overflow-y: scroll;
-  margin: 30px;
+ 
   gap: 10px;
 }
 .topstories{
-
+ border: 0.5px solid #cfd1d4;
+border-bottom: none;
     padding: 15px;
+   
+}
+.topstories:hover{
+  background-color: #a9c1f5;
+}
+.topstories>h4{
+  font :600 15px/20px "OpenSans-Regular";
+  color: #111;
+}
+.topstories>h4:hover{
+ color:  #264587;
+ 
 }
 #container {
   display: flex;
@@ -135,17 +171,16 @@ input.visible{
   display: none;
   position: absolute;
   left: 0;
-  top: 190px;
-  background-color: aqua;
+  top: 125px;
+  
   z-index: 1000000;
-  height: 600px;
-  width: 300px;
+  height: 3000px;
+  width: 400px;
   overflow: hidden;
   overflow-y:auto;
 }
 .mobilesidebaritems {
-  background-color: blue;
-  padding: 10px;
+  display: none;
 }
 .featurednews {
   display: grid;
@@ -156,8 +191,8 @@ input.visible{
   grid-column: 1/-1;
   width: 100%;
   height:400px;
-  
-  font-size: 35px;
+  font-weight: 900;
+  font-size: 25px;
 }
 .post {
  margin: auto;
@@ -172,24 +207,38 @@ input.visible{
 }
 .postimg {
     display: block;
-    margin: auto;
+    margin: 10px;
+    margin-right: 15px;
   height: 50%;
-  width: 80%;
-  transition: width height  ;
-  transition-duration: 1s;
-  cursor: zoom-in;
+  width: 100%;
+  transition: transform ;
+  transition-duration: .5s;
+ 
 }
 #featurednewsdiv {
-  border: 1px solid rgb(165, 161, 161);
+  border: 1px solid #cfd1d4;
   padding: 5px;
  margin: 30px;
   gap: 20px;
-  width: 506px;
+  width: 596px;
   height: 630px;
+  
+}
+.featurednews h3 {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 500;
+ 
+  
+}
+#post1 > h3{
+ 
+  font-size: 30px;
+  font-weight: 700;
 }
 .postimg:hover {
- width: 100%;
-    height: 60%;
+ transform: scale(1.2);
+
 }
 #newscategories{
     display: grid;
@@ -197,47 +246,77 @@ input.visible{
     gap: 20px;
     padding: 20px;
 }
+#newscategories div {
+  padding: 20px;
+}
+#newscategories div li{
+  border-top: 1px solid #cfd1d4 ;
+  padding: 15px;
+  
+}
+#newscategories div li::marker{
+  color: #a00606;
+}
+#newscategories div img{
+  margin-top: 20px;
+}
 #feeds{
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  background-color: aqua;
+  
   padding: 20px;
   
 }
 .stories{
-  background-color: blue;
-  font-size: larger;
-padding: 20px;
-width: 430px;
-height:300px ;
+  grid-column: 1/1/2;
 }
+
+
 #feeds .stories  img {
   width: 420px;
 }
 
 #specials{
  display: flex;
- gap: 40px;
- justify-content: space-between;
- padding: 50px;
- font-size: larger;
- font-style: bold;
+ padding: 30px;
+ gap: 70px;
 }
 #visualstories{
   height: 300px;
-  width: 500px;
+  width: 800px;
   display:flex;
   gap: 20px;
   overflow: hidden;
   overflow-x: scroll;
+  border: 0.5px solid #cfd1d4;
+  border-radius: 5px;
+  padding: 15px;
+}
+#visualstories img{
+  height: 200px;
+  width: 150px;
+  border-radius: 10px;
+  margin: 20px;
 }
 #todaysspecials{
   height: 300px;
-  width: 500px;
+  width: 400px;
   display: flex;
   gap: 30px;
+  
   overflow: hidden;
   overflow-x: scroll;
+  margin-right: 50px;
+  border: 0.5px solid #cfd1d4;
+  border-radius: 5px;
+  padding: 15px;
+  padding-top: 50px;
+
+}
+#todaysspecials img{
+  width: 200px;
+  height: 100px;
+  border-radius: 5px;
 }
 #opinions{
   height: 300px;
@@ -261,5 +340,136 @@ button img{
   width: 20px;
   border-radius: 10px;
 }
+label{
+  font-size: larger;
+  font-style: bold;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+#sidebar1{
+  display: none;
+  height:15px;
+  width: 20px;
+}
+#mobilebitcoin{
+  display: none;
+}
+hr{
+  display: none;
+}
+.user {
+  display: none;
+}
+#Ads img{
+  margin: auto;
+  
+  margin-left: 50px;
+  display: block;
+}
+#Ads{
+  
+  text-align: center;
+  align-items: center;
+ 
+}
+@media (max-width: 290px) {
+  #navbar{
+    display: none;
+  }
+  #sidebar1{
+    display: block;
+    
+  }
+  
+}
 
+@media (min-width: 291px) and (max-width: 550px) {
+  #navbar{
+    display: none;
+  }
+  #sidebar1{
+    display: block;
+    position: absolute;
+    left: -30px;
+  }
+  #two{
+    width: 100vw;
+    gap: 10px;
+   box-shadow:0px 3px rgba(163, 161, 161,0.2) ;
+   margin-left: 10px;
+  }
+  #two h3{
+    font-size: small;
+    font-weight: 400;
+  }
+  #mobilebitcoin{
+    display: block;
+    height: 30px;
+    
+  }
+  hr{
+    display: block;
+  }
+  #mobilesidebar{
+   
+    background-color: #e9dfdf;
+  }
+  .mobilesidebaritems {
+    display: block;
+    color: rgb(105, 101, 101);
+    padding: 10px;
+    border-top: .5px solid rgba(105, 101, 101,0.3) ;
+  }
+  .user a{
+    margin: auto;
+    margin-top: 0px;
+    position: absolute;
+    top: 10;
+    color: #6d6f72;
+    text-decoration: none;
+   
+  }
+  .user img{
+    
+    height: 40px;
+    width: 40px;
+  }
+  .user{
+    display: block;
+  }
+  .user input {
+    width: 80%;
+    height: 40px;
+  }
+  #topnews{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+#feeds{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+}
+#topstoriesdiv{
+  height: 628;
+  width: 500px;
+  
+}
+.featurednews {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  height: fit-content;
+ padding: 20px;
+}
+#featurednewsdiv{
+  height: fit-content;
+}
+.featurednews:first-child{
+  width: 400px;
+}
+
+}
+
+
+@media (min-width: 551px) and (max-width: 920px) {
+}
 

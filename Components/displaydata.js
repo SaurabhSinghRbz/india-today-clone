@@ -5,6 +5,9 @@ function displayfeatueddata(featuredata,topdata,feedsdata){
         
     let featuredpost1= document.createElement("div")
     featuredpost1.className="post"
+    if(element===featuredata[0]){
+            featuredpost1.id= "post1"
+    }
     let postimg = document.createElement("img");
     postimg.className="postimg"
     postimg.src= element.urlToImage

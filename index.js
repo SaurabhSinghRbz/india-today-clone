@@ -140,7 +140,7 @@ else{
     
 
         if(elem===data[0]){
-           
+            
             let image = document.createElement("img")
             image.src= elem.urlToImage
             let headline = document.createElement("h1")
