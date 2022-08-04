@@ -48,7 +48,7 @@ const initFunction = async () => {
 }
 initFunction();
 function displayNews(newsData) {
-    let randomNews = getRandomNumber()
+    let randomNews = localStorage.getItem("articleId") - 1
     let { country, category, title, description, author: authorName, publishedAt, urlToImage, content } = newsData[randomNews]
     if (authorName == null || authorName == "") {
         authorName = "XYZ-XYZ"
@@ -111,6 +111,11 @@ function suggestedArticle(data, parentNode) {
         let box = document.createElement("div");
         box.className = "smallPoster";
 
+        box.addEventListener('click', function () {
+            localStorage.setItem("articleId", data[randomIdx].source.id)
+            location.href = "../Pages/detailedArticle.html"
+        })
+
         let titleDiv = document.createElement("div");
         titleDiv.innerHTML = title;
 
@@ -133,7 +138,10 @@ function recommendedArticle(data) {
 
         let box = document.createElement("div");
         box.className = "bigPoster";
-
+        box.addEventListener('click', function () {
+            localStorage.setItem("articleId", data[randomIdx].source.id)
+            location.href = "../Pages/detailedArticle.html"
+        })
         let titleDiv = document.createElement("p");
         titleDiv.innerHTML = title;
 
