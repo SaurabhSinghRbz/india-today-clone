@@ -1,4 +1,6 @@
+
 @import url("./Styles/navbar.css");
+@import url("./Styles/footer.css");
 img{
     height: 200px;
     width: 300px;
@@ -259,3 +261,5 @@ button img{
   width: 20px;
   border-radius: 10px;
 }
+
+
