@@ -71,6 +71,7 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 35px;
+    transition: all 1s ease-in-out;
     /* transition: top 2s ease-in;
     transition-duration: 20s; */
 }
