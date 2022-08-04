@@ -32,31 +32,39 @@ const getData = async (url) => {
 }
 
 
-
+var newsDataForLoadMore;
 const initFunction = async () => {
     try {
         let newsData = await getData("http://localhost:3000/articles")
-        console.log(newsData)
+        newsDataForLoadMore = newsData
+        // console.log(newsData)
         displayNews(newsData)
         readThis(newsData)
         readRightNow(newsData)
         topTakes(newsData)
         recommendedArticle(newsData)
+        addArticleInBottom(newsData)
+        addArticleInBottom(newsData)
+        addArticleInBottom(newsData)
     } catch (error) {
         console.log(error)
     }
 }
 initFunction();
 function displayNews(newsData) {
-    let randomNews = getRandomNumber()
-    let { country, category, title, description, author: authorName, publishedAt, urlToImage, content } = newsData[randomNews]
+    let randomNews = localStorage.getItem("articleId") - 1
+    let { country, category, title, description, author: authorName, publishedAt, urlToImage, content: articleContent } = newsData[randomNews]
     if (authorName == null || authorName == "") {
         authorName = "XYZ-XYZ"
     }
     let dateAndTime = publishedAt.split("T")
 
-    let newsContentArr = content.split("[")
-    console.log(newsContentArr)
+    if (articleContent == null || articleContent == "" || articleContent.length <= 150) {
+        articleContent = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.]"
+    }
+    let newsContentArr = articleContent.split("[")
+
+    // console.log(newsContentArr)
     document.getElementById("pageTitle").textContent = title;
     document.getElementById("newsTitle").textContent = title;
     document.getElementById("newsTitle").textContent = title;
@@ -111,6 +119,11 @@ function suggestedArticle(data, parentNode) {
         let box = document.createElement("div");
         box.className = "smallPoster";
 
+        box.addEventListener('click', function () {
+            localStorage.setItem("articleId", data[randomIdx].source.id)
+            location.href = "../Pages/detailedArticle.html"
+        })
+
         let titleDiv = document.createElement("div");
         titleDiv.innerHTML = title;
 
@@ -133,7 +146,10 @@ function recommendedArticle(data) {
 
         let box = document.createElement("div");
         box.className = "bigPoster";
-
+        box.addEventListener('click', function () {
+            localStorage.setItem("articleId", data[randomIdx].source.id)
+            location.href = "../Pages/detailedArticle.html"
+        })
         let titleDiv = document.createElement("p");
         titleDiv.innerHTML = title;
 
@@ -147,3 +163,72 @@ function recommendedArticle(data) {
     }
 }
 
+
+
+function addArticleInBottom(data) {
+    let mainDiv1 = document.createElement("div");
+    mainDiv1.id = "bigArticlePoster";
+    for (let i = 0; i < 4; i++) {
+        let idx = getRandomNumber()
+        let { title, urlToImage } = data[idx]
+        // console.log(title, urlToImage)
+        let box = document.createElement("div");
+        box.addEventListener('click', function () {
+            localStorage.setItem("articleId", data[idx].source.id)
+            location.href = "../Pages/detailedArticle.html"
+        })
+        let img = document.createElement("img");
+        img.src = urlToImage;
+
+        let p = document.createElement("p");
+        p.innerHTML = title;
+        box.append(img, p)
+        mainDiv1.append(box)
+    }
+    document.getElementById("relatedArticle").append(mainDiv1)
+
+
+
+
+    let mainDiv2 = document.createElement("div");
+    mainDiv2.id = "smallArticlePoster";
+    for (let i = 0; i < 3; i++) {
+        let idx = getRandomNumber()
+        let { title, urlToImage } = data[idx]
+        // console.log(title, urlToImage)
+        let box = document.createElement("div");
+        box.addEventListener('click', function () {
+            localStorage.setItem("articleId", data[idx].source.id)
+            location.href = "../Pages/detailedArticle.html"
+        })
+        let img = document.createElement("img");
+        img.src = urlToImage;
+
+        let p = document.createElement("p");
+        p.innerHTML = title;
+        box.append(img, p)
+        mainDiv2.append(box)
+    }
+    document.getElementById("relatedArticle").append(mainDiv2)
+}
+
+
+document.getElementById("loadMoreButt").addEventListener("click", function () {
+    addArticleInBottom(newsDataForLoadMore);
+    addArticleInBottom(newsDataForLoadMore);
+    addArticleInBottom(newsDataForLoadMore);
+})
+
+
+
+
+window.addEventListener('scroll', () => {
+    let totalWindowHeight = document.documentElement.scrollHeight;
+    let offsetOfMyPage = 1400;
+    let currentWindowHeight = window.scrollY;
+
+    if (totalWindowHeight - currentWindowHeight <= offsetOfMyPage) {
+        addArticleInBottom(newsDataForLoadMore);
+    }
+    // console.log(window.scrollY, scrollHeight)
+});
