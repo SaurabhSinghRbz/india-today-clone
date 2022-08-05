@@ -20,7 +20,7 @@
     border-bottom: 1px solid grey;
     height: fit-content;
 
-    
+    width: 100vw;
 }
 h5 > a{
     display: flex;

@@ -1,3 +1,6 @@
+import { detailedarticle } from "./displaydata.js"
+
+
 async function fetchfeatureddata(displayfeatueddata){
     let rnum= Math.floor((Math.random()*100)+1)
    // console.log(rnum)
@@ -10,7 +13,7 @@ async function fetchfeatureddata(displayfeatueddata){
         let feedsres = await fetch(`http://localhost:3000/articles?_start=${rnum}&_limit=100`)
         let feedsdata = await feedsres.json()
         console.log(feedsdata)
-       displayfeatueddata(featureddata,topdata,feedsdata)
+       displayfeatueddata(featureddata,topdata,feedsdata,detailedarticle)
     } catch (error) {
         console.log(error)
     }

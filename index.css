@@ -3,11 +3,13 @@
 @import url("./Styles/footer.css");
 img{
     height: 200px;
-    width: 300px;
+    width: 95%;
     cursor: pointer;
 }
 body{
-  width: fit-content;
+  
+  width:100vw;
+ 
   overflow: hidden;
   overflow-y: scroll;
 }
@@ -35,10 +37,11 @@ p:hover{
 
 *{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+  font :400 ;
+  color: #111;
 }
 #sidebar {
-  height:1000vw;
+  height:100vw;
   width: 200px;
  
   display: none;
@@ -54,7 +57,7 @@ p:hover{
 
   height: 628;
   width: 300;
-  overflow: hidden;
+  
   overflow-y: scroll;
  
   gap: 10px;
@@ -63,6 +66,7 @@ p:hover{
  border: 0.5px solid #cfd1d4;
 border-bottom: none;
     padding: 15px;
+    word-wrap: break-word;
    
 }
 .topstories:hover{
@@ -87,6 +91,7 @@ border-bottom: none;
   gap: 100px;
   position: sticky;
 }
+
 #topics {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
@@ -208,7 +213,7 @@ input.visible{
 .postimg {
     display: block;
     margin: 10px;
-    margin-right: 15px;
+    
   height: 50%;
   width: 100%;
   transition: transform ;
@@ -248,10 +253,12 @@ input.visible{
 }
 #newscategories div {
   padding: 20px;
+  font-weight: 100;
 }
 #newscategories div li{
-  border-top: 1px solid #cfd1d4 ;
+  border-top: 1px solid hsl(216, 5%, 82%) ;
   padding: 15px;
+  font-weight: 100;
   
 }
 #newscategories div li::marker{
@@ -261,19 +268,30 @@ input.visible{
   margin-top: 20px;
 }
 #feeds{
+  width: 90vw;
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  
-  padding: 20px;
-  
+  font-weight: 400;
+  padding: 5%;
+ border-block-color: red;
+  row-gap: 60px;
 }
+
 .stories{
+  display: block;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  padding: 2%;
   grid-column: 1/1/2;
 }
 
-
+#feeds h4{
+  font-weight:500;
+}
 #feeds .stories  img {
-  width: 420px;
+  margin-bottom: 30px;
+  width: 90%;
 }
 
 #specials{
@@ -321,10 +339,15 @@ input.visible{
 #opinions{
   height: 300px;
   width: 500px;
+  padding-right: 10%;
   gap: 10px;
   display: flex;
   overflow: hidden;
   overflow-x: scroll;
+}
+#opinions > div  img{
+  height: 200px;
+  width: 200px;
 }
 #Ads{
   height: 300px;
@@ -383,7 +406,7 @@ hr{
   
 }
 
-@media (min-width: 291px) and (max-width: 550px) {
+@media (min-width: 280px) and (max-width: 550px) {
   #navbar{
     display: none;
   }
@@ -391,10 +414,12 @@ hr{
     display: block;
     position: absolute;
     left: -30px;
+    margin-right: 30px;
   }
   #two{
+    
     width: 100vw;
-    gap: 10px;
+    justify-content:space-between;
    box-shadow:0px 3px rgba(163, 161, 161,0.2) ;
    margin-left: 10px;
   }
@@ -443,30 +468,99 @@ hr{
   }
   #topnews{
     display: grid;
+   padding: none;
+   margin: none;
+    width: 100%;
     grid-template-columns: repeat(1,1fr);
 }
 #feeds{
   display: grid;
+  padding: 10px;
+  width: 100%;
   grid-template-columns: repeat(1,1fr);
 }
 #topstoriesdiv{
   height: 628;
-  width: 500px;
+ display: block;
+ margin-top: 25px;
+  width: 100vw;
+  align-items: center;
   
+}
+.topstories{
+  display: block;
+  padding-right: 0%;
+  padding-left: 0%;
+  text-align: center;
+width: 90vw;
 }
 .featurednews {
   display: grid;
+ 
   grid-template-columns: repeat(1, 1fr);
   height: fit-content;
- padding: 20px;
+ 
+ width: 100%;
+ align-items: center;
 }
 #featurednewsdiv{
   height: fit-content;
+  margin: 0%;
+  padding: 0%;
+  width: 90vw;
+  
 }
-.featurednews:first-child{
-  width: 400px;
+#specials{
+  display: block;
+ padding: 0%;
+ width: 100vw;
+}
+#visualstories{
+  width: 90vw;
+  padding: 2%;
+}
+#todaysspecials{
+  width: 90vw;
+  padding: 2%;
 }
 
+.featurednews > :first-child{
+  width: 90%;
+ 
+}
+
+.post{
+  width: 90%;
+}
+#featurednewsdiv img{
+  width: 95%;
+  margin: 5%;
+}
+#post1 img{
+  width: 95%;
+}
+#newscategories{
+  grid-template-columns: repeat(1,1fr);
+}
+#opinion{
+  width: 90vw;
+}
+#opinion img{
+  height: 40%;
+  width: 40%;
+}
+#feeds{
+  grid-template-columns: repeat(1,1fr);
+
+}
+body{
+  width: 100vw;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+#one{
+  display: none;
+}
 }
 
 

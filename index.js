@@ -5,6 +5,7 @@ import {createsibaritems} from "./Components/sidebar.js"
 import { displayfeatueddata } from "./Components/displaydata.js"
 import{fetchfeatureddata} from "./Components/getdata.js"
 import { footer, expandFooter } from "./Components/footer.js";
+import{detailedarticle} from "./Components/displaydata.js"
 document.getElementById("footerContainer").innerHTML = footer();
  expandFooter();
 // console.log(expandFooter())
