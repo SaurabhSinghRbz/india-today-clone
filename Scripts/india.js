@@ -1,3 +1,28 @@
+import {header} from "../Components/header.js"
+import {navbar} from "../Components/navbar.js"
+import {createsibaritems} from "../Components/sidebar.js"
+// footer --->
+import { footer, expandFooter } from "../Components/footer.js";
+document.getElementById("footerContainer").innerHTML = footer();
+// expandFooter();
+// console.log(expandFooter())
+let hiderFalg = true;
+let hiderDiv = document.getElementById("hider").addEventListener('click', function () {
+    if (hiderFalg) {
+        document.getElementById("footerBlock2").style.display = "none"
+        document.getElementById("hiderImg").src = "../Images/footer/expand.png"
+        hiderFalg = false;
+    } else {
+        document.getElementById("footerBlock2").style.display = "grid"
+        document.getElementById("hiderImg").src = "../Images/footer/hide.png"
+        hiderFalg = true
+    }
+})
+//  footer ends----------------------------------------------------------------------
+
+createsibaritems()
+document.getElementById("head").innerHTML=header()
+document.getElementById("navbar").innerHTML=navbar()
 var fullBox=document.getElementById("newsBox")
 getData()
 async function getData(){
@@ -23,7 +48,7 @@ function display(data,sideData){
 data.map(function(elem){
     //box==> Containing all single news
     let box = document.getElementById("newsBox")   
-   
+    
    //Single==>Holding 1 news
    let single = document.createElement("div")
    single.setAttribute("id","single")
@@ -50,6 +75,10 @@ data.map(function(elem){
         // single.append(line)
         box.append(single)
     }
+    tittle.addEventListener('click', function () {
+        localStorage.setItem("articleId", elem.source.id)
+        location.href = "../Pages/detailedArticle.html"
+    })
     
 })
 

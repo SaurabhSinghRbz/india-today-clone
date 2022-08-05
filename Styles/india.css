@@ -1,3 +1,6 @@
+/* @import url(); */
+@import url("../index.css");
+@import url("../Styles/footer.css");
 #pic{
     /* box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; */
     /* text-align: center; */
@@ -78,4 +81,7 @@
    /* #flex-child{
     flex: 1;
 
+   } */
+   /* #navBar{
+    background-color: red;
    } */
