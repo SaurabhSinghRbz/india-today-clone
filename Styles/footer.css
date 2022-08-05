@@ -117,6 +117,10 @@
     padding: 8px 5px;
 }
 
+#footerBlock3 img {
+    height: 40px;
+}
+
 @media (max-width: 290px) {
     #footerBlock1>:first-child {
         font-size: 20px;
