@@ -18,7 +18,7 @@ let hiderDiv = document.getElementById("hider").addEventListener('click', functi
 //  footer ends----------------------------------------------------------------------
 
 
-
+window.speechSynthesis.cancel();
 
 // Article result show --->
 const getData = async (url) => {
@@ -79,6 +79,88 @@ function displayNews(newsData) {
     document.getElementById("newsContent3").textContent = `${newsContentArr[0]} ${newsContentArr[0]} ${newsContentArr[0]}`;
     document.getElementById("newsContent4").textContent = `${newsContentArr[0]} ${newsContentArr[0]} ${newsContentArr[0]} ${newsContentArr[0]} ${newsContentArr[0]}`;
 }
+
+
+//  ---Play Text and speed of text --->
+
+document.getElementById("playPauseAudio").addEventListener("click", () => {
+    changeIcon()
+})
+
+var speedCount = 1
+document.getElementById("increaseSpeed").addEventListener("click", function () {
+    if (speedCount < 4) {
+        speedCount += 0.25
+        stopText()
+        playText(speedCount)
+    }
+    span.innerHTML = `${speedCount} X`
+
+})
+document.getElementById("decreaseSpeed").addEventListener("click", function () {
+    if (speedCount >= 0.5) {
+        speedCount -= 0.25
+    }
+    span.innerHTML = `${speedCount} X`
+    stopText()
+    playText(speedCount)
+})
+let span = document.getElementById("speedCount");
+span.innerHTML = `${speedCount}.0 X`
+
+
+
+
+let play = false
+function changeIcon() {
+    if (!play) {
+        document.getElementById("playPauseAudio").src = "../Images/newsDetails/playingAnima.gif"
+        play = true;
+        document.getElementById("playPauseAudio").src = "../Images/newsDetails/playingAnima.gif"
+        setTimeout(() => {
+            playText(1)
+        }, 1500)
+
+    } else {
+        // stopText();
+        pauseText();
+        play = false;
+    }
+}
+
+
+function stopText() {
+    // speechSynthesis.resume()
+    speechSynthesis.cancel()
+}
+
+function playText(speed) {
+    document.getElementById("playPauseAudio").src = "../Images/newsDetails/audioPause.png"
+    document.getElementById("audioText").innerHTML = "Playing Article..."
+    document.getElementById("speedButtons").style.visibility = "visible"
+    let newsContent = document.getElementById("newsContent1").textContent + document.getElementById("newsContent1").textContent
+    if (speechSynthesis.paused && speechSynthesis.speaking) {
+        return speechSynthesis.resume()
+    } else {
+        var msg = new SpeechSynthesisUtterance(newsContent);
+        msg.rate = speed
+        window.speechSynthesis.speak(msg);
+    }
+}
+
+
+function pauseText() {
+    document.getElementById("playPauseAudio").src = "../Images/newsDetails/audioPlay.png"
+    document.getElementById("audioText").innerHTML = "Listen to this article now..."
+    if (speechSynthesis.speaking) speechSynthesis.pause();
+    document.getElementById("speedButtons").style.visibility = "hidden"
+}
+// play and speed of news ends here ---->
+
+
+
+
+
 
 
 document.getElementById("readMoreButt").addEventListener("click", function () {
@@ -228,7 +310,7 @@ window.addEventListener('scroll', () => {
     let currentWindowHeight = window.scrollY;
 
     if (totalWindowHeight - currentWindowHeight <= offsetOfMyPage) {
-        addArticleInBottom(newsDataForLoadMore);
+        // addArticleInBottom(newsDataForLoadMore);
     }
     // console.log(window.scrollY, scrollHeight)
 });
