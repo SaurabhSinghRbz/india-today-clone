@@ -44,7 +44,7 @@ async function getData(){
 
 
 function display(data,sideData){
-    let country ="India"
+    let country ="World"
 data.map(function(elem){
     //box==> Containing all single news
     let box = document.getElementById("newsBox")   

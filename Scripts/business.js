@@ -44,7 +44,7 @@ async function getData(){
 
 
 function display(data,sideData){
-    let country ="India"
+    let category ="Business"
 data.map(function(elem){
     //box==> Containing all single news
     let box = document.getElementById("newsBox")   
@@ -63,7 +63,7 @@ data.map(function(elem){
     let tittle = document.createElement("h4")
     let img = document.createElement("img")
     img.setAttribute("class","img")
-    if(elem.country ==country){
+    if(elem.category ==category){
         name.textContent = elem.description+" "+elem.description
         tittle.innerText = elem.title
         img.setAttribute("src",elem.urlToImage)
