@@ -5,13 +5,13 @@ function footer() {
         <div>
             <div>
                 <div><a target="_blank" href="https://www.facebook.com/IndiaToday/"><img class="social-connect"
-                            src="../Images/footer/fb.png"></a></div>
+                            src="./Images/footer/fb.png"></a></div>
                 <div><a target="_blank" href="https://twitter.com/indiatoday"><img class="social-connect"
-                            src="../Images/footer/twitter.png"></a></div>
-                <div><a href="#"><img class="social-connect" src="../Images/footer/rss.png"></a></div>
-                <div><a href="#"><img class="social-connect" src="../Images/footer/search.png"></a></div>
+                            src="./Images/footer/twitter.png"></a></div>
+                <div><a href="#"><img class="social-connect" src="./Images/footer/rss.png"></a></div>
+                <div><a href="#"><img class="social-connect" src="./Images/footer/search.png"></a></div>
             </div>
-            <div id="hider"><a href="#"><img id="hiderImg" src="../Images/footer/hide.png"></a></div>
+            <div id="hider"><a href="#"><img id="hiderImg" src="./Images/footer/hide.png"></a></div>
         </div>
     </div>
     <div id="footerBlock2">
@@ -84,13 +84,13 @@ function footer() {
         <p class="footerMenu">Download App</p>
         <div>
             <a target="_blank" href="https://play.google.com/store/apps/details?id=com.indiatoday&hl=en">
-                <img src="../Images/footer/androidApp.png">
+                <img src="./Images/footer/androidApp.png">
             </a>
             <a target="_blank" href="https://apps.apple.com/in/app/india-today-live/id510733452">
-                <img src="../Images/footer/IOSApp.png">
+                <img src="./Images/footer/IOSApp.png">
             </a>
             <a target="_blank" href="https://play.google.com/store/apps/details?id=com.indiatoday.tv">
-                <img src="../Images/footer/watchOnTv.png">
+                <img src="./Images/footer/watchOnTv.png">
             </a>
         </div>
         <p class="footerMenu">Copyright © 2022 Living Media India Limited. For reprint rights: Syndications
@@ -104,11 +104,11 @@ function expandFooter() {
     let hiderDiv = document.getElementById("hider").addEventListener('click', function () {
         if (hiderFalg) {
             document.getElementById("footerBlock2").style.display = "none"
-            document.getElementById("hiderImg").src = "../Images/footer/expand.png"
+            document.getElementById("hiderImg").src = "./Images/footer/expand.png"
             hiderFalg = false;
         } else {
             document.getElementById("footerBlock2").style.display = "grid"
-            document.getElementById("hiderImg").src = "../Images/footer/hide.png"
+            document.getElementById("hiderImg").src = "./Images/footer/hide.png"
             hiderFalg = true
         }
     })`

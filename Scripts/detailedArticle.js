@@ -1,4 +1,8 @@
 // footer --->
+
+
+//  footer ends----------------------------------------------------------------------
+
 import { footer, expandFooter } from "../Components/footer.js";
 document.getElementById("footerContainer").innerHTML = footer();
 // expandFooter();
@@ -346,4 +350,8 @@ window.addEventListener('scroll', () => {
         addArticleInBottom(newsDataForLoadMore);
     }
 });
+
 // done
+=======
+
+
