@@ -331,11 +331,18 @@ document.getElementById("loadMoreButt").addEventListener("click", function () {
 
 window.addEventListener('scroll', () => {
     let totalWindowHeight = document.documentElement.scrollHeight;
-    let offsetOfMyPage = 3000;
+    let screenWidth = window.screen.availWidth
+    let offsetOfMyPage;
+
+    if (screenWidth <= 600) {
+        offsetOfMyPage = 7000;
+    } else {
+        offsetOfMyPage = 2000;
+    }
+
     let currentWindowHeight = window.scrollY;
 
     if (totalWindowHeight - currentWindowHeight <= offsetOfMyPage) {
         addArticleInBottom(newsDataForLoadMore);
     }
-    // console.log(window.scrollY, scrollHeight)
 });
