@@ -335,7 +335,7 @@ window.addEventListener('scroll', () => {
     let currentWindowHeight = window.scrollY;
 
     if (totalWindowHeight - currentWindowHeight <= offsetOfMyPage) {
-        // addArticleInBottom(newsDataForLoadMore);
+        addArticleInBottom(newsDataForLoadMore);
     }
     // console.log(window.scrollY, scrollHeight)
 });
