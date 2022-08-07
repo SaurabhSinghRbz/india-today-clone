@@ -134,6 +134,11 @@
         display: none;
         border: none;
     }
+
+    #footerBlock2 {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
 }
 
 @media (min-width: 291px) and (max-width: 550px) {
@@ -145,6 +150,17 @@
     #footerBlock1>:last-child {
         grid-template-columns: 100%;
     }
+
+    #footerBlock1 img {
+        padding: 5% 10%;
+        height: 70%;
+        width: 70%;
+    }
+
+    #footerBlock2 {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+    }
 }
 
 
@@ -152,4 +168,6 @@
     #footerBlock1>:last-child {
         width: 55%;
     }
+
+
 }
