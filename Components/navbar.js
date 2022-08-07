@@ -48,7 +48,7 @@ function navbar(){
             </g>
         </svg>
     </div>
-    <a href=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:svgjs="http://svgjs.com/svgjs"
+    <a href="./Pages/signup.html"><svg xmlns="http://www.w3.org/2000/svg" xmlns:svgjs="http://svgjs.com/svgjs"
             xmlns:xlink="http://www.w3.org/1999/xlink" width="288" height="288"><svg
                 xmlns="http://www.w3.org/2000/svg" width="33" height="33" data-name="Layer 1"
                 viewBox="0 0 48 48">
