@@ -94,20 +94,45 @@ document.getElementById("increaseSpeed").addEventListener("click", function () {
         stopText()
         playText(speedCount)
     }
+    // background color amd cursor change when it reaches at max value -->
+    if (speedCount == 4) {
+        document.getElementById("increaseSpeed").style.backgroundColor = "white"
+        document.getElementById("increaseSpeed").style.cursor = "not-allowed"
+        document.getElementById("decreaseSpeed").style.backgroundColor = "grey"
+        document.getElementById("decreaseSpeed").style.cursor = "pointer"
+    } else {
+        document.getElementById("increaseSpeed").style.backgroundColor = "grey"
+        document.getElementById("decreaseSpeed").style.backgroundColor = "grey"
+        document.getElementById("increaseSpeed").style.cursor = "pointer"
+        document.getElementById("decreaseSpeed").style.cursor = "pointer"
+    }
     span.innerHTML = `${speedCount} X`
 
 })
 document.getElementById("decreaseSpeed").addEventListener("click", function () {
     if (speedCount >= 0.5) {
         speedCount -= 0.25
+        stopText()
+        playText(speedCount)
+    }
+
+    // background color amd cursor change when it reaches at least value -->
+    if (speedCount == 0.25) {
+        document.getElementById("decreaseSpeed").style.backgroundColor = "white"
+        document.getElementById("decreaseSpeed").style.cursor = "not-allowed"
+        document.getElementById("increaseSpeed").style.cursor = "pointer"
+        document.getElementById("increaseSpeed").style.backgroundColor = "grey"
+    } else {
+        document.getElementById("decreaseSpeed").style.backgroundColor = "grey"
+        document.getElementById("decreaseSpeed").style.cursor = "pointer"
+        document.getElementById("increaseSpeed").style.cursor = "pointer"
+        document.getElementById("increaseSpeed").style.backgroundColor = "grey"
     }
     span.innerHTML = `${speedCount} X`
-    stopText()
-    playText(speedCount)
+
 })
 let span = document.getElementById("speedCount");
 span.innerHTML = `${speedCount}.0 X`
-
 
 
 
@@ -306,11 +331,18 @@ document.getElementById("loadMoreButt").addEventListener("click", function () {
 
 window.addEventListener('scroll', () => {
     let totalWindowHeight = document.documentElement.scrollHeight;
-    let offsetOfMyPage = 1400;
+    let screenWidth = window.screen.availWidth
+    let offsetOfMyPage;
+
+    if (screenWidth <= 600) {
+        offsetOfMyPage = 7000;
+    } else {
+        offsetOfMyPage = 2000;
+    }
+
     let currentWindowHeight = window.scrollY;
 
     if (totalWindowHeight - currentWindowHeight <= offsetOfMyPage) {
-        // addArticleInBottom(newsDataForLoadMore);
+        addArticleInBottom(newsDataForLoadMore);
     }
-    // console.log(window.scrollY, scrollHeight)
 });
