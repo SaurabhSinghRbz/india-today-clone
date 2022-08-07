@@ -343,7 +343,6 @@ window.addEventListener('scroll', () => {
     let currentWindowHeight = window.scrollY;
 
     if (totalWindowHeight - currentWindowHeight <= offsetOfMyPage) {
-        addArticleInBottom(newsDataForLoadMore);
+        // addArticleInBottom(newsDataForLoadMore);
     }
 });
-// done
