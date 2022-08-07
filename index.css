@@ -419,7 +419,7 @@ hr{
   #two{
     
     width: 100vw;
-    justify-content:space-between;
+    justify-content:space-evenly;
    box-shadow:0px 3px rgba(163, 161, 161,0.2) ;
    margin-left: 10px;
   }
@@ -557,6 +557,7 @@ body{
   width: 100vw;
   overflow: hidden;
   overflow-y: scroll;
+  padding-left: 20px;
 }
 #one{
   display: none;
