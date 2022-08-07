@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+            height: 60px;
+        }
+
+        .logo {
+            margin-left: 25px;
+            margin-top: 20px;
+            color: white;
+            padding-top: 0;
+        }
+
+        .inage {
+            margin-right: 35px;
+        }
+
+        .p1 {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .p2 {
+            font-size: 20px;
+            text-align: center;
+            margin: -22px;
+        }
+        .p4 {
+            height: 1px;
+            background-color: gray;
+            width: 17%;
+            margin-right: 10px;
+        }
+
+        .p5 {
+            font-size: 20px;
+            color: #8E8E8E;
+        }
+
+        .p6 {
+            height: 1px;
+            background-color: gray;
+            width: 17%;
+            margin-left: 10px;
+        }
+        .p7{
+            height: 1px;
+            background-color: gray;
+            width: 7.5%;
+            margin-right: 10px;
+        }
+        .p8 {
+            font-size: 20px;
+            color: #8E8E8E;
+        }
+        .p9{
+            height: 1px;
+            background-color: gray;
+            width: 7.5%;
+            margin-left: 10px;
+        }
+
+        #anu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #singh {
+            margin: auto;
+            display: block;
+            /* background-color: red; */
+            width: fit-content;
+
+        }
+        #singh1{
+            margin: auto;
+            display: block;
+            /* background-color: red; */
+            width: fit-content;
+            width: 170px;
+            height: 40px;
+            background-color: rgb(10, 102, 240);
+            border-radius: 4px;
+            border-color: rgb(10, 102, 240);;
+ 
+        }
+
+</style>
+<body>
+    <nav>
+        <div class="logo">
+            <p>Back to India Today</p>
+        </div>
+        <div class="inage">
+            <img src="https://auth.indiatoday.in/sites/all/themes/itg/images/span_itg_group.png" alt="">
+        </div>
+    </nav>
+    <br>
+
+   
+    <!-- <p id="p3"><span>_______________________________</span>Sign in via <span>_______________________________</span></p> -->
+    </div>
+    <div id="anu">
+        <p class="p4"></p>
+        <p class="p5">Sign Up By <span> </span></p>
+        <p class="p6"></p>
+    </div>
+    <div id="singh">
+        <br>
+        <img style="width: 170px; height: 40px; cursor: pointer; " src="../Images/log in/Screenshot 2022-08-04 225752.jpg" alt="">
+        <img style="width: 170px; height: 42px; cursor: pointer; " src="../Images/log in/facebook.jpg" alt="">
+        <img style="width: 170px; height: 40px; cursor: pointer; " src="../Images/log in/google.jpg" alt="">
+    </div>
+    <div id="anu">
+        <br><br><br>
+        <p class="p7"></p>
+        <p class="p8">Or sign in using your email or mobile no.
+            <span> </span>
+        </p>
+        <p class="p9"></p>
+
+       
+    </div>
+    <br>
+    <div style="display: flex; justify-content: space-around; width: 50%; margin: auto;" >
+        <select style="width: 240px; height: 40px;" name ="country" id="select1">
+            <option value="total">India</option>
+            <option value="Peris">Peris</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Australia">Australia</option>
+            <option value="Austria">	Austria</option>
+            <option value="Azerbaijan">Azerbaijan</option>
+            <option value="Bahamas">Bahamas</option>
+            <option value="	Bahrain">	Bahrain</option>
+            <option value="Canada">Canada	Chad</option>
+            <option value="	Chad">	Chad</option>
+            <option value="Colombia">Colombia</option>
+        </select>
+
+        <input style="width: 240px; height: 37px; " type="text" placeholder="Enter Your Name">
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div style="display: flex; justify-content: space-around; width: 50%; margin: auto;" >
+        <input style="width: 240px; height: 37px; " type="text" placeholder="Enter Your Email">
+        <input style="width: 240px; height: 37px; " type="password" placeholder="Enter Your Password">
+    </div>
+    <br><br>
+
+    <div style="width: 75%;">
+    <div style="margin-left: 328px;">
+        <input  type="checkbox" id="scales" name="scales"
+               checked>
+        <label for="scales">I agree to the <a style="text-decoration: none;" href="https://www.indiatodaygroup.com/SSO-Login-policy.html">SSO login privacy terms</a>  and I warrant that I am above 16 years of age. *</label>
+      </div>
+      <br>
+      
+      <div style="margin-left: 328px;">
+        <input  type="checkbox" id="scales" name="scales"
+               checked>
+        <label for="scales">I agree to the processing of my personal information for profiling such as My Credits, Follow activity , Personalised recommendations and Advertisements.</label>
+      </div>
+      <br>
+      
+      <div style="margin-left: 328px;">
+        <input  type="checkbox" id="scales" name="scales"
+               checked>
+        <label for="scales">I wish to receive custom communications i.e. Emails, newsletters, SMS, notifications from India Today based on my interests and my activities on the website.</label>
+      </div>
+      <br>
+      
+    </div>
+    <br>    
+    <button style="font-size: 20px;" id="singh1">Sign Up</button>
+    <br>
+    <div style="width: 45%; margin: auto; display: flex; justify-content: space-between;">
+        <p> <span style="color: red;">*</span>  Mandatory Fields</p>
+        <p>Already registered? <a style="color: red;" href="login.html"> Sign In</a></p>
+    </div>
+    
+    <BR></BR>
+    <div  style="padding-left: 330px;">
+        <img style="width: 570px; height: 90px; cursor: pointer; justify-content: space-around ; " src="../Images/log in/LONG IMAGE.jpg" alt=""> 
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      
+</body>
+</html>
