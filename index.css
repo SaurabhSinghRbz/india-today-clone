@@ -1,17 +1,6 @@
 @import url("./Styles/navbar.css");
 @import url("./Styles/footer.css");
 
-#shead {
-  height: 40px;
-  width: 100%;
-  background-color: aqua;
-}
-
-#snavbar {
-  height: 150px;
-  width: 100%;
-  background-color: blueviolet;
-}
 
 img {
   height: 200px;
