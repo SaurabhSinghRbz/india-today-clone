@@ -36,8 +36,11 @@ function createsibaritems(){
     
     sidebaritems.forEach(element => {
        let div = document.createElement("div")
-       div.innerText= element;
+       let a = document.createElement("a")
+       a.href="../detailedArticles.html"
+       a.innerText= element;
        div.className="mobilesidebaritems"
+       div.append(a)
        document.getElementById("mobilesidebar").append(div)
     });
 }
