@@ -94,10 +94,76 @@
 }
 
 #audioBox {
-    height: 100px;
+    height: auto;
     width: 100%;
-    border: 1px solid red;
     margin-bottom: 10px;
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 15px;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+
+#audioBox>div>p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 10px;
+
+}
+
+#speedButtons {
+    margin-top: 20px;
+    visibility: hidden;
+    width: max-content;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15px;
+    overflow: hidden;
+}
+
+#speedButtons>span {
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    width: 35px;
+}
+
+#speedButtons>button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0px 3px;
+    background-color: grey;
+}
+
+#speedButtons>button:hover {
+    cursor: pointer;
+
+}
+
+#increaseSpeed {
+    border: none;
+    border-left: 1px solid black;
+}
+
+#decreaseSpeed {
+    border: none;
+    border-right: 1px solid black;
+}
+
+#playPauseAudio {
+    height: 60px;
+}
+
+#playPauseAudio:hover {
+    cursor: pointer;
 }
 
 #newsContentBox {
