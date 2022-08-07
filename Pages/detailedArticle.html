@@ -4,14 +4,192 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title id="pageTitle">Document</title>
     <link rel="stylesheet" href="../Styles/detailedArticle.css">
-    <link rel="icon" href="../Images/titleIcon.ico">
+    <link rel="icon" href="https://www.indiatoday.in/sites/all/themes/itg/favicon.ico">
 </head>
 
-<body>
-   
+
+<body id="myPage">
+    <div id="mobilesidebar"></div>
+    <div id="head"></div>
+    <div id="navbar"></div>
+    <div id="articleContainer">
+        <div id="showArticle">
+            <p id="showCategoery"></p>
+            <h1 id="newsTitle"></h1>
+            <em></em>
+            <div id="authorDetails">
+                <div id="authorPicBox">
+                    <div><img src="..//Images/newsDetails/userProfile.jpg"></div>
+                    <div>
+                        <p id="auName"></p>
+                        <p id="postedDate"></p>
+                    </div>
+                </div>
+                <div id="socialLinks">
+                    <a target="_blank" href="https://www.youtube.com/channel/UCYPvAwZP8pZhSMW8qs7cVCw"><img
+                            class="social-icons" src="../Images/newsDetails/youtube.webp"></a>
+                    <a target="_blank" href="https://www.facebook.com/IndiaToday"><img class="social-icons"
+                            src="../Images/newsDetails/fb.webp"></a>
+                    <a target="_blank" href="https://twitter.com/indiatoday"><img class="social-icons"
+                            src="../Images/newsDetails/twitter.webp"></a>
+                    <a target="_blank" href="#"><img class="social-icons" src="../Images/newsDetails/whatsapp.webp"></a>
+                    <a target="_blank" href="#"><img class="social-icons" src="../Images/newsDetails/bookmark.webp"></a>
+                    <a target="_blank" href="#"><img class="social-icons" src="../Images/newsDetails/comment.webp"></a>
+                </div>
+            </div>
+            <div id="posterBox"><img src="" id="articlePoster"></div>
+            <div id="audioBox">
+                <img src="../Images/newsDetails/audioPlay.png" id="playPauseAudio">
+                <div>
+                    <p id="audioText">Listen to this article now...</p>
+                    <div id="speedButtons">
+                        <button id="decreaseSpeed">-</button>
+                        <span id="speedCount"></span>
+                        <button id="increaseSpeed">+</button>
+                    </div>
+                </div>
+            </div>
+            <div id="newsContentBox">
+                <p id="newsContent1"></p>
+                <br>
+                <br>
+                <p id="newsContent2"></p>
+                <br>
+                <br>
+                <br>
+                <p id="newsContent3"></p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p id="newsContent4"></p>
+                <a href="#"><img style="margin: 15px 0;" src="../Images/newsDetails/liveTvGif.webp" alt=""></a>
+                <p style="text-align: center; margin-bottom: 20px;">--- ENDS ---</p>
+            </div>
+            <div id="readMoreButt"><button>Read More ➥</button></div>
+            <div id="subscribeBox">
+                <div>SUBSCRIBE TO OUR NEWSLETTER</div>
+                <div>
+                    <input type="email" id="emailBox" placeholder="Enter your email">
+                    <button>GO</button>
+                </div>
+                <div id="checkBox">
+                    <input type="checkbox">
+                    <p>I agree to receive newsletters via email*</p>
+                </div>
+
+            </div>
+            <div
+                style="height: 50px; width: 100%; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; margin-bottom: 20px;">
+            </div>
+
+            <div id="commentBox">
+                <button id="commentCount"></button>
+            </div>
+
+
+            <p style="text-align: center; font-size: 21px; margin-bottom: 10px;">---Post a comment---</p>
+            <hr style="border: 1px solid #ddd;">
+
+            <div id="relatedArticle">
+                <!-- <div id="bigArticlePoster">
+                    <div>
+                        <img src="https://i.ytimg.com/vi/Vt-V6vH24_U/maxresdefault.jpg">
+                        <p>An American man flew from Costa Rica to Miami just to retrieve his stranded bag, which he
+                            says had thousands of dollars of drone gear in it - Yahoo! Voices</p>
+                    </div>
+                    <div>
+                        <img src="https://i.ytimg.com/vi/Vt-V6vH24_U/maxresdefault.jpg">
+                        <p>An American man flew from Costa Rica to Miami just to retrieve his stranded bag, which he
+                            says had thousands of dollars of drone gear in it - Yahoo! Voices</p>
+                    </div>
+                    <div>
+                        <img src="https://i.ytimg.com/vi/Vt-V6vH24_U/maxresdefault.jpg">
+                        <p>An American man flew from Costa Rica to Miami just to retrieve his stranded bag, which he
+                            says had thousands of dollars of drone gear in it - Yahoo! Voices</p>
+                    </div>
+                    <div>
+                        <img src="https://i.ytimg.com/vi/Vt-V6vH24_U/maxresdefault.jpg">
+                        <p>An American man flew from Costa Rica to Miami just to retrieve his stranded bag, which he
+                            says had thousands of dollars of drone gear in it - Yahoo! Voices</p>
+                    </div>
+                </div> -->
+                <!-- <div id="smallArticlePoster">
+                    <div>
+                        <img src="https://cdn.punchng.com/wp-content/uploads/2022/04/23015602/Transcorp-Power.jpg">
+                        <p>An American man flew from Costa Rica to Miami just to retrieve his stranded bag, which he
+                            says had thousands of dollars of drone gear in it - Yahoo! Voices</p>
+                    </div>
+                    <div>
+                        <img src="https://cdn.punchng.com/wp-content/uploads/2022/04/23015602/Transcorp-Power.jpg">
+                        <p>An American man flew from Costa Rica to Miami just to retrieve his stranded bag, which he
+                            says had thousands of dollars of drone gear in it - Yahoo! Voices</p>
+                    </div>
+                    <div>
+                        <img src="https://cdn.punchng.com/wp-content/uploads/2022/04/23015602/Transcorp-Power.jpg">
+                        <p>An American man flew from Costa Rica to Miami just to retrieve his stranded bag, which he
+                            says had thousands of dollars of drone gear in it - Yahoo! Voices</p>
+                    </div>
+                </div> -->
+                <!-- <div id="bigArticlePoster">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div id="smallArticlePoster">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div id="bigArticlePoster">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div> -->
+
+            </div>
+            <div id="loadMoreButt"><button>Load More ➥</button></div>
+        </div>
+
+        <div id="suggestedArticle">
+            <div id="random1">
+                <div class="suggestedHeading">
+                    <h3>READ THIS</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div id="random2">
+                <div class="suggestedHeading">
+                    <h3>RECOMMENDED</h3>
+                    <p></p>
+                </div>
+                <!-- <div class="bigPoster">
+                    <div><img src="https://i.ytimg.com/vi/Vt-V6vH24_U/maxresdefault.jpg"></div>
+                    <p>Subway fan earns free subs for life after receiving a promotional tattoo - Yahoo Finance</p>
+                </div> -->
+            </div>
+            <div id="random3">
+                <div class="suggestedHeading">
+                    <h3>READ RIGHT NOW</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div id="random4">
+                <div class="suggestedHeading">
+                    <h3>TOP TAKES</h3>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footerContainer"></div>
+    </div>
 </body>
 <script src="../Scripts/detailedArticle.js" type="module"></script>
+
 
 </html>
