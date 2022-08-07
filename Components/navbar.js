@@ -2,7 +2,7 @@ function navbar(){
     return` <div id="topics"  style="width:800px;">
     <div class="items"><a href="">HOME</a></div>
     <div class="items"><a href=""> MY FEED</a></div>
-    <div class="items"><a href="./Pages/india.html">INDIA</a></div>
+    <div class="items"><a href="../Pages/india.html">INDIA</a></div>
     <div class="items"> <a href="">WORLD</a></div>
     <div class="items"><a href="">BUSINESS</a></div>
     <div class="items"><a href="">TECH</a></div>
