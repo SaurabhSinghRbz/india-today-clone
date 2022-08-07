@@ -1,6 +1,7 @@
 @import url("./Styles/navbar.css");
 @import url("./Styles/footer.css");
 
+
 #shead {
   height: 40px;
   width: 100%;
@@ -14,10 +15,11 @@
   width: 100%;
   background-color: blueviolet;
 }
-img{
-    height: 200px;
-    width: 95%;
-    cursor: pointer;
+
+img {
+  height: 200px;
+  width: 95%;
+  cursor: pointer;
 
 }
 
