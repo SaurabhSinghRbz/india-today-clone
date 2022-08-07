@@ -8,6 +8,9 @@
 
 
 
+
+
+
 #footerBox {
     height: auto;
     width: 100%;
@@ -31,6 +34,7 @@
     align-items: center;
     font-size: 1.5rem;
     font-weight: 500;
+    color: white;
 
 }
 
@@ -67,6 +71,7 @@
 }
 
 #footerBlock2 h4 {
+    color: white;
     font-size: 0.85rem;
     margin-top: 15px;
 }
