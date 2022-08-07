@@ -346,3 +346,4 @@ window.addEventListener('scroll', () => {
         addArticleInBottom(newsDataForLoadMore);
     }
 });
+// done
