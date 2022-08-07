@@ -28,7 +28,7 @@ getData()
 async function getData(){
     let rnum= Math.floor((Math.random()*100)+1)
     try {
-        let url = `http://localhost:3000/articles?_limit=100`
+        let url = `http://localhost:3000/articles?_limit=585`
         let readUrl = `http://localhost:3000/articles?_limit=10&_start=${rnum}`
         let res = await fetch(url)
         let read = await fetch(readUrl)
