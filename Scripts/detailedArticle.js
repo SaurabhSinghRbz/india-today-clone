@@ -331,7 +331,7 @@ document.getElementById("loadMoreButt").addEventListener("click", function () {
 
 window.addEventListener('scroll', () => {
     let totalWindowHeight = document.documentElement.scrollHeight;
-    let offsetOfMyPage = 1400;
+    let offsetOfMyPage = 3000;
     let currentWindowHeight = window.scrollY;
 
     if (totalWindowHeight - currentWindowHeight <= offsetOfMyPage) {
