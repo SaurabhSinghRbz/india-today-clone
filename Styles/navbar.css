@@ -22,7 +22,7 @@
 
     width: 100vw;
 }
-h5 > a{
+#navbar h5 > a{
     display: flex;
     white-space:nowrap;
     color: #938e8e;
@@ -32,7 +32,24 @@ h5 > a{
     text-decoration: none;
     
 }
- h3>a {
+ #navbar h3>a {
+    text-decoration: none;
+    color: #575757;
+    font-size: larger;
+   
+    
+}
+#head h5 > a{
+    display: flex;
+    white-space:nowrap;
+    color: #938e8e;
+    font: 12px ;
+    font-weight: 700;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    
+}
+#head h3>a {
     text-decoration: none;
     color: #575757;
     font-size: larger;

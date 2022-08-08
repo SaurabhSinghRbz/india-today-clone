@@ -14,7 +14,7 @@ async function getuserdata(){
    try {
       let res = await fetch(`http://localhost:3000/userDeatails`)
    let data = await res.json()
-   console.log(data)
+   //console.log(data)
    check(data)
       
    } catch (error) { 
