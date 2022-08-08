@@ -1,8 +1,11 @@
+import { header } from "../Components/header.js"
+import { navbar } from "../Components/navbar.js"
+import { createsibaritems } from "../Components/sidebar.js"
+createsibaritems()
+document.getElementById("navbar").innerHTML = navbar()
+document.getElementById("head").innerHTML = header()
+
 // footer --->
-
-
-//  footer ends----------------------------------------------------------------------
-
 import { footer, expandFooter } from "../Components/footer.js";
 document.getElementById("footerContainer").innerHTML = footer();
 // expandFooter();
@@ -20,6 +23,39 @@ let hiderDiv = document.getElementById("hider").addEventListener('click', functi
     }
 })
 //  footer ends----------------------------------------------------------------------
+
+
+
+// sideBAr -->
+document.getElementById("searchicon").addEventListener("click", function () {
+    displaysearchbar()
+})
+document.getElementById("sidebar1").addEventListener("click", function () {
+    displaysidebar()
+})
+function displaysearchbar() {
+
+    var searchbar = document.getElementById("searchbar");
+    if (searchbar.className === "base") { searchbar.className = "visible" }
+    else { searchbar.className = searchbar.className === 'base' ? 'visible' : 'base' }
+    if (searchbar.style.display === '') searchbar.style.display = 'block'
+    else searchbar.style.display = searchbar.style.display === 'none' ? 'block' : 'none'
+    //console.log(searchbar.className)
+
+}
+function displaysidebar() {
+    var searchbar = document.getElementById("mobilesidebar");
+    if (searchbar.style.display === '') searchbar.style.display = 'block'
+    else searchbar.style.display = searchbar.style.display === 'none' ? 'block' : 'none'
+
+}
+
+
+
+// sideBAr
+
+
+
 
 
 window.speechSynthesis.cancel();
@@ -349,8 +385,11 @@ window.addEventListener('scroll', () => {
     if (totalWindowHeight - currentWindowHeight <= offsetOfMyPage) {
         addArticleInBottom(newsDataForLoadMore);
     }
+
 });
 
+
 // done
+
 
 
