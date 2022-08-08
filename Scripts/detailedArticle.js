@@ -1,8 +1,8 @@
 import { header } from "../Components/header.js"
-import { navbar } from "../Components/navbar.js"
+// import { navbar } from "../Components/navbar.js"
 import { createsibaritems } from "../Components/sidebar.js"
 createsibaritems()
-document.getElementById("navbar").innerHTML = navbar()
+// document.getElementById("navbar").innerHTML = navbar()
 document.getElementById("head").innerHTML = header()
 
 // footer --->
