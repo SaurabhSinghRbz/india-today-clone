@@ -15,6 +15,7 @@ document.getElementById("submitButt").addEventListener("click", async () => {
                 'Content-Type': "application/json"
             }
         })
+        alert("SignUp successfull....")
         location.href = "../index.html"
         console.log(userData)
     } catch (error) {

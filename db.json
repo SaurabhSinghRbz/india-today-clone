@@ -10037,5 +10037,12 @@
     }
   ],
   "userDeatails": [
+    {
+      "fullName": "Saurabh Singh",
+      "emailNumber": "singhsaurabh8576@gmail.com",
+      "country": "India",
+      "password": "1234",
+      "id": 1
+    }
   ]
 }
