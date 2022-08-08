@@ -10052,5 +10052,11 @@
       "country": "World"
     }
   ],
-  "userDeatails": [{}]
+  "userDeatails": [{
+    "id": 1,
+    "fullName": "xyz",
+    "emailNumber": "abc@gamil.com",
+    "country": "India",
+    "password": "shjhg@1341"
+  }]
 }

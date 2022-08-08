@@ -61,7 +61,18 @@ function tssl(){
 }
 
 
+document.getElementById("account").addEventListener("click",userdetails)
 
+function userdetails(){
+    console.log("userdeatils")
+    let id = localStorage.getItem("userid");
+    if(id){
+        location.href= "./Pages/account.html"
+    }
+    else{
+        location.href="./Pages/signup.html"
+    }
+}
 
 
 
@@ -147,6 +158,12 @@ else{
             let headline = document.createElement("h1")
             headline.innerText=elem.title
             div.append(image,headline)
+            image.addEventListener("click",function(){
+                detailedarticle(elem)
+             })
+             headline.addEventListener("click",function(){
+                detailedarticle(elem)
+             })
             
         }
         
@@ -157,7 +174,10 @@ else{
             listitem.append(h4)
             ul.append(listitem)
             
-        
+           
+             h4.addEventListener("click",function(){
+                detailedarticle(elem)
+             })
         
         
     });
@@ -166,5 +186,3 @@ else{
 }
 
 }
-
-

@@ -3,9 +3,9 @@ function navbar(){
     <div class="items"><a href="">HOME</a></div>
     <div class="items"><a href=""> MY FEED</a></div>
     <div class="items"><a href="./Pages/india.html">INDIA</a></div>
-    <div class="items"> <a href="">WORLD</a></div>
-    <div class="items"><a href="">BUSINESS</a></div>
-    <div class="items"><a href="">TECH</a></div>
+    <div class="items"> <a href="./Pages/world.html">WORLD</a></div>
+    <div class="items"><a href="./Pages/business.html">BUSINESS</a></div>
+    <div class="items"><a href="./Pages/tech.html">TECH</a></div>
     <div class="items"><a href="">MOVIES</a></div>
     <div class="items"> <a href="">CWG 2022 </a></div>
     <div class="items"><a href="">SCIENCE</a></div>
@@ -48,7 +48,8 @@ function navbar(){
             </g>
         </svg>
     </div>
-    <a href="./Pages/signup.html"><svg xmlns="http://www.w3.org/2000/svg" xmlns:svgjs="http://svgjs.com/svgjs"
+    <a>
+    <div id="account"><svg xmlns="http://www.w3.org/2000/svg" xmlns:svgjs="http://svgjs.com/svgjs"
             xmlns:xlink="http://www.w3.org/1999/xlink" width="288" height="288"><svg
                 xmlns="http://www.w3.org/2000/svg" width="33" height="33" data-name="Layer 1"
                 viewBox="0 0 48 48">
@@ -57,7 +58,7 @@ function navbar(){
                     class="color42c3cf svgShape" />
                 <circle cx="24" cy="16" r="12" fill="#fff" class="color42c3cf svgShape" />
             </svg></svg>
-
+</div>
 
     </a>
 </div>

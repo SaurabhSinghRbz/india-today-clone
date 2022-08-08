@@ -9,7 +9,7 @@ img{
 body{
   
   width:100vw;
- 
+ position: relative;
   overflow: hidden;
   overflow-y: scroll;
 }
