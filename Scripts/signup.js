@@ -1,13 +1,25 @@
 document.getElementById("submitButt").addEventListener("click", async () => {
     try {
+        let res = await fetch('http://localhost:3000/userDeatails')
+        let data = await res.json();
+        // console.log(data)
+        let newestId = data.length + 1
+        localStorage.setItem("userid", newestId)
+        addUserData()
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+
+async function addUserData() {
+    try {
         let userData = {
             "fullName": document.getElementById("name").value,
             "emailNumber": document.getElementById("emailNumber").value,
             "country": document.getElementById("country").value,
             "password": document.getElementById("password").value
         }
-
-
         let res = await fetch("http://localhost:3000/userDeatails", {
             method: "POST",
             body: JSON.stringify(userData),
@@ -15,13 +27,12 @@ document.getElementById("submitButt").addEventListener("click", async () => {
                 'Content-Type': "application/json"
             }
         })
-        alert("SignUp successfull....")
         location.href = "../index.html"
-        console.log(userData)
+        // alert("SignUp successfull....")
     } catch (error) {
         console.log(error)
     }
-})
+}
 
 
 
