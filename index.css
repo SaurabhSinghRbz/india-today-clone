@@ -10,6 +10,12 @@
 
 }
 
+body {
+
+  width: 100vw;
+
+}
+
 #snavbar {
   height: 150px;
   width: 100%;
@@ -38,6 +44,7 @@ img {
 body {
 
   width: 100vw;
+
 
   overflow: hidden;
   overflow-y: scroll;
@@ -516,9 +523,9 @@ hr {
 
     width: 100vw;
 
-    justify-content:space-evenly;
-   box-shadow:0px 3px rgba(163, 161, 161,0.2) ;
-   margin-left: 10px;
+    justify-content: space-evenly;
+    box-shadow: 0px 3px rgba(163, 161, 161, 0.2);
+    margin-left: 10px;
 
     justify-content: space-evenly;
     box-shadow: 0px 3px rgba(163, 161, 161, 0.2);
@@ -601,19 +608,21 @@ hr {
     align-items: center;
 
 
-}
-body{
-  width: 100vw;
-  overflow: hidden;
-  overflow-y: scroll;
-  padding-left: 20px;
-}
-#one{
-  display: none;
-}
-}
-
   }
+
+  body {
+    width: 100vw;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-left: 20px;
+  }
+
+  #one {
+    display: none;
+  }
+
+
+
 
   .topstories {
     display: block;
@@ -704,7 +713,7 @@ body{
   #one {
     display: none;
   }
-}
 
+}
 
 @media (min-width: 551px) and (max-width: 920px) {}
