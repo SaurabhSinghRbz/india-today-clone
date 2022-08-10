@@ -1,11 +1,11 @@
-function navbar(){
-    return` <div id="topics"  style="width:800px;">
-    <div class="items"><a href="">HOME</a></div>
+function navbar() {
+    return ` <div id="topics"  style="width:800px;">
+    <div class="items"><a href="index.html">HOME</a></div>
     <div class="items"><a href=""> MY FEED</a></div>
-    <div class="items"><a href="../Pages/india.html">INDIA</a></div>
-    <div class="items"> <a href="">WORLD</a></div>
-    <div class="items"><a href="">BUSINESS</a></div>
-    <div class="items"><a href="">TECH</a></div>
+    <div class="items"><a href="./Pages/india.html">INDIA</a></div>
+    <div class="items"> <a href="./Pages/world.html">WORLD</a></div>
+    <div class="items"><a href="./Pages/business.html">BUSINESS</a></div>
+    <div class="items"><a href="./Pages/tech.html">TECH</a></div>
     <div class="items"><a href="">MOVIES</a></div>
     <div class="items"> <a href="">CWG 2022 </a></div>
     <div class="items"><a href="">SCIENCE</a></div>
@@ -14,7 +14,7 @@ function navbar(){
 
 <div id="icons">
     
-    <a href=""><img src="../Images/icons/icons8-menu.svg" alt="">
+    <a href=""><img src="./Images/icons/icons8-menu.svg" alt="">
 
     </a>
     <a href="https://www.indiatoday.in/interactive/cryptocurrency-price-in-india-bitcoin-ethereum-dogecoin-ripple-litecoin/"
@@ -29,14 +29,14 @@ function navbar(){
                     transform="translate(10.081 0) rotate(17)" fill="#fff"></path>
             </g>
         </svg></a>
-    <a href="./Pages/livetv/livetv.html"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+    <a href="./Pages/liveTv.html"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px"
             viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
             <path id="hovesvg" fill="#FFFFFF"
                 d="M22,7h-8.17l4.76-4.76c0.39-0.39,0.39-1.02,0-1.41c-0.39-0.39-1.02-0.39-1.41,0l-5.13,5.13L6.91,0.83 c-0.39-0.39-1.02-0.39-1.41,0c-0.39,0.39-0.39,1.02,0,1.41L10.25,7H2C0.9,7,0,7.9,0,9v12c0,1.1,0.9,2,2,2h20c1.1,0,2-0.9,2-2V9 C24,7.9,23.1,7,22,7z M22,20c0,0.55-0.45,1-1,1H3c-0.55,0-1-0.45-1-1V10c0-0.55,0.45-1,1-1h18c0.55,0,1,0.45,1,1V20z">
             </path>
         </svg></a>
-    <a href=""><img src="../Images/icons/icons8-share.svg" alt=""></a>
+    <a href=""><img src="./Images/icons/icons8-share.svg" alt=""></a>
     <input id="searchbar" placeholde="search">
     <div id="searchicon">
 
@@ -48,7 +48,8 @@ function navbar(){
             </g>
         </svg>
     </div>
-    <a href=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:svgjs="http://svgjs.com/svgjs"
+    <a>
+    <div id="account"><svg xmlns="http://www.w3.org/2000/svg" xmlns:svgjs="http://svgjs.com/svgjs"
             xmlns:xlink="http://www.w3.org/1999/xlink" width="288" height="288"><svg
                 xmlns="http://www.w3.org/2000/svg" width="33" height="33" data-name="Layer 1"
                 viewBox="0 0 48 48">
@@ -57,10 +58,10 @@ function navbar(){
                     class="color42c3cf svgShape" />
                 <circle cx="24" cy="16" r="12" fill="#fff" class="color42c3cf svgShape" />
             </svg></svg>
-
+</div>
 
     </a>
 </div>
 `
 }
-export {navbar}
+export { navbar }
