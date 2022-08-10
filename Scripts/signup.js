@@ -1,3 +1,5 @@
+window.speechSynthesis.cancel();
+
 document.getElementById("submitButt").addEventListener("click", async () => {
     try {
         let res = await fetch('http://localhost:3000/userDeatails')
