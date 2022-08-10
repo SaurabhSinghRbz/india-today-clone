@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title id="pageTitle">IndiaToday Dashboard</title>
+    <link rel="icon" href="https://www.indiatoday.in/sites/all/themes/itg/favicon.ico">
     <style>
         * {
             padding: 0%;
             margin: 0%;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
         .h1 {
@@ -17,7 +19,7 @@
             margin-top: 15px;
             font-size: 13px;
             color: #8E8E8E;
-            
+
         }
 
         .h2 {
@@ -26,21 +28,25 @@
             font-size: 13px;
             color: #8E8E8E;
         }
-        .h3{
+
+        .h3 {
             color: white;
             font-size: 17px;
             /* line-height: 22px; */
             padding-bottom: 10px;
         }
-        .h1:hover{
+
+        .h1:hover {
             cursor: pointer;
             color: black;
         }
-        .h2:hover{
+
+        .h2:hover {
             cursor: pointer;
             color: black;
         }
-        .h3:hover{
+
+        .h3:hover {
             cursor: pointer;
             /* color: black; */
             border-bottom: 4px solid red;
@@ -65,34 +71,40 @@
         <br>
         <hr>
     </nav>
+    <div style="display: flex; justify-content: space-between;  margin: 2% 8% 0 8%; align-items: center;">
 
-    <div style="display: flex; height: 120px; padding-top: 20px; padding-left: 40px;">
-        <div style="display: flex;">
-            <img src="https://akm-img-a-in.tosshub.com/sso/logo.png?yi4iBZr84BotcQerccVrm3jxQWaighSE" alt="">
-            <h2 style="padding-left: 40px; padding-top: 50px; font-size: 30px;">My Dashboard</h2>
-        </div>
-        <div style="padding-left: 550px; padding-top: 20px;;">
-            <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/mediamanager/span_itg_group.png" alt="">
-        </div>
+        <a href="../index.html">
+            <img style="height: 100px;"
+                src="https://akm-img-a-in.tosshub.com/sso/logo.png?yi4iBZr84BotcQerccVrm3jxQWaighSE">
+        </a>
+
+        <h1>My Dashboard</h1>
+        <a href="../index.html">
+            <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/mediamanager/span_itg_group.png">
+        </a>
+
     </div>
+
     <br>
 
     <div style="display: flex; background-color: #cae5fe; height: 230px;">
 
         <div style="padding-left: 50px; padding-top: 50px;">
-            <img style="border-radius: 50%; width: 250%;" src="https://auth.indiatoday.in/sites/all/themes/itg/images/default-user.png" alt="">
+            <img style="border-radius: 50%; width: 250%;"
+                src="https://auth.indiatoday.in/sites/all/themes/itg/images/default-user.png" alt="">
         </div>
 
-        <div style="padding-left: 110px; padding-top: 40px;">
-            <h1 style="padding-top: 10px;">Anubhva Singh</h1>
-            <h2 style="padding-top: 10px;">9569811502</h2>
-            <h2 style="padding-top: 10px;">India</h2>
+        <div id="info" style="padding-left: 110px; padding-top: 40px;">
+            <h1 id="username" style="padding-top: 10px;"></h1>
+            <h2 id="useremailNumber" style="padding-top: 10px;"></h2>
+            <h2 id="usercountry" style="padding-top: 10px;"></h2>
             <hr>
-           
+
         </div>
-        
+
     </div>
-    <div style="display: flex; background-color: #284a6a; height: 45px; justify-content: space-between; width: 90%; padding-top: -20px; padding: 0 5%; align-items: center;">
+    <div
+        style="display: flex; background-color: #284a6a; height: 45px; justify-content: space-between; width: 90%; padding-top: -20px; padding: 0 5%; align-items: center;">
         <h1 class="h3">Aaj Tak</h1>
         <h1 class="h3">Business Today</h1>
         <h1 class="h3">DailyO</h1>
@@ -102,16 +114,17 @@
         <h1 class="h3">Odd Naari</h1>
         <h1 class="h3">Pakwangali</h1>
         <h1 class="h3">Reader's Digest</h1>
-     </div>
+    </div>
 
-     <h1 style="padding-left: 30px; padding-top: 10px;">My Account</h1>
-     <br><br>
-     <br>
-     <h1 style="text-align: center;">No Activity found.</h1>
-     <br><br>
-     <br></br>
-     <br><br><br><br><br><br><br><br><br><br>
-     <br><br><br><br><br><br><br><br>
+    <h1 style="padding-left: 30px; padding-top: 10px;">My Account</h1>
+    <br><br>
+    <br>
+    <h1 style="text-align: center;">No Activity found.</h1>
+    <br><br>
+    <br></br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
 </body>
 
 </html>
+<script src="../Scripts/account.js"></script>
